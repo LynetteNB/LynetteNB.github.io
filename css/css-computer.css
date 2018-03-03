@@ -1,0 +1,99 @@
+/*Colors: light pink #FBD5DB, gray #818183 charcoal #5D737E teal #64B6AC light blue #C0FDFB*/
+
+.computer {
+    width: 100%;
+    height: 32.444444vw;
+}
+.outerScreen{
+    width: 33.333333333333336vw;
+    height: 18.88888888888889vw;
+    background: #5D737E;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: -0.6944444444444444vw 0.6944444444444444vw 0.6944444444444444vw grey;
+}
+.screen{
+    width: 31.11111111111111vw;
+    height: 14.444444444444445vw;
+    background: #C0FDFB;
+    border-radius: 20px;
+    position: absolute;
+    top: 1.1111111111111112vw;
+    left: 1.1111111111111112vw;
+}
+.heading {
+    width: 25.555555555555554vw;
+    margin: 0 auto;
+    padding: 2.7777777777777777vw 0;
+}
+.type{
+    animation: typing 2s steps(13, end), blinking .9s step-end infinite;
+    border-right: 3px solid #5D737E;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+    font-size: 3.888888888888889vw;
+}
+@keyframes typing {
+    0%{width: 0;}
+    100%{width: 100%}
+}
+@keyframes blinking {
+    0%{border-color: transparent;}
+    50%{border-color: #5D737E;}
+}
+.power {
+    width: 4.444444444444445vw;
+    height: 1.1111111111111112vw;
+    background: #5D737E;
+    border: 0.2777777777777778vw solid #818183;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0.8333333333333333vw;
+    right: 14.444444444444445vw;
+}
+.stand{
+    background: lightgray;
+    width: 5.555555555555555vw;
+    height: 2.2222222222222223vw;
+    border-left: 0.5555555555555556vw solid #5D737E;
+    border-right: 0.5555555555555556vw solid #5D737E;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    box-shadow: -0.6944444444444444vw 0.20833333333333331vw 0.6944444444444444vw grey;
+}
+.keyboard {
+    width: 31.11111111111111vw;
+    height: 11.11111111111111vw;
+    background: #5D737E;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+.all-keys{
+    margin: 0 auto;
+    padding: 1.6666666666666665vw;
+}
+.key-row{
+    display: flex;
+}
+.key {
+    width: 1.6666666666666665vw;
+    height: 1.3888888888888888vw;
+    background: #5D737E;
+    border-radius: 10px;
+    border: 0.2777777777777778vw solid #818183;
+    margin: 0.20833333333333331vw;
+}
+.space {
+    width: 7.222222222222222vw;
+    height: 1.3888888888888888vw;
+    background: #5D737E;
+    border-radius: 10px;
+    border: 0.2777777777777778vw solid #818183;
+    margin: 0.20833333333333331vw;
+}
