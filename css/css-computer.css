@@ -2,6 +2,7 @@
 
 .computer {
     width: 100%;
+    margin-top: 6vw;
 }
 .outerScreen{
     width: 33.333333333333336vw;
@@ -31,7 +32,7 @@
     border-right: 3px solid #5D737E;
     white-space: nowrap;
     overflow: hidden;
-    animation-delay: 1s;
+    animation-delay: 2s;
     animation-fill-mode: both;
     font-size: 3.888888888888889vw;
 }

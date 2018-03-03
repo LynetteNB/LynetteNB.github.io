@@ -1,13 +1,15 @@
 /*Colors: light pink #FBD5DB, gray #818183 charcoal #5D737E teal #64B6AC light blue #C0FDFB*/
-
+html {
+    height: 100%;
+}
 body {
     margin: 0;
     padding: 0;
     font-family: 'Anonymous Pro', monospace;
     text-align: center;
     color: #5D737E;
-    background-image: url("../img/background.png");
     width: 100%;
+    height: 100%;
 }
 h1{
    font-size: 4vw;
@@ -23,32 +25,6 @@ p {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.5vw;
 }
-.nav {
-    box-sizing: border-box;
-    width: 100%;
-    background: #5D737E;
-    color: white;
-    padding: 1.5vw;
-    position: fixed;
-    z-index: 10;
-    font-size: 2vw;
-}
-.nav .name {
-    display: inline;
-    position: absolute;
-    left: 41.75vw;
-}
-.nav-links.right {
-    float: right;
-    display: inline;
-}
-.nav-links.left {
-    float: left;
-    display: inline;
-}
-.nav-links a{
-    padding: 1.5vw;
-}
 .container {
     margin: 0 auto;
     width: 90%;
@@ -56,14 +32,14 @@ p {
 }
 .row {
     width:100%;
-    padding: 5vw 0;
+    padding: 3vw 0;
 }
-
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
+
 .column {
     float: left;
     padding: 1.5vw;
@@ -74,6 +50,12 @@ p {
 }
 .column.one-fourth{
     width: 25%;
+}
+.column.two-fifths{
+    width: 40%;
+}
+.column.three-fifths{
+    width: 60%;
 }
 .column.one-half{
     width: 50%;
@@ -93,25 +75,74 @@ p {
 .column.two-thirds {
     width: 66.67%;
 }
+.nav {
+    box-sizing: border-box;
+    width: 100%;
+    background: #5D737E;
+    color: white;
+    padding: 1.5vw;
+    position: fixed;
+    z-index: 10;
+    font-size: 1.5vw;
+}
+.nav .name {
+    display: inline;
+    position: absolute;
+    left: 43.75vw;
+    text-decoration: none;
+    color: white;
+}
+.nav-links.right {
+    float: right;
+    display: inline;
+}
+.nav-links.left {
+    float: left;
+    display: inline;
+}
+.nav-links a{
+    padding: 1.5vw;
+    text-decoration: none;
+    color: white;
+}
+.nav a:hover{
+    color: #FBD5DB;
+}
+.nav a:active{
+    color: #64B6AC;
+}
 .banner{
     width: 100%;
-    height: 55vw;
     background: white;
+    min-height: 100%;
 }
 .banner-inner{
     padding: 20vw;
 }
 .pink{
     background: #FBD5DB;
-    height: auto;
+    min-height: 100%;
 }
 .about p{
     text-align: left;
+    font-size: 1.25vw;
+    background: #5D737E;
+    color: #64B6AC;
+    padding: 1.5vw;
+    border-radius: 10px;
+    height: 30vw;
+}
+.focus{
+    color: white;
+}
+.light-blue {
+    background: #C0FDFB;
+    min-height: 100%;
 }
 .gray{
     background: #818183;
-    height: auto;
     color: white;
+    min-height: 100%;
 }
 .projects img, .contact img {
     width: 100%;
@@ -125,6 +156,7 @@ p {
 }
 .contact {
     background: #64B6AC;
+    min-height: 100%;
 }
 .contact img{
     border-radius: 50%;

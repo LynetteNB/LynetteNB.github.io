@@ -13,25 +13,25 @@
 <body>
 <div class="nav">
     <div class="nav-links left">
-        <a>About</a>
-        <a>Resume</a>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
     </div>
-    <div class="name">Lynette Barrera</div>
+    <a href="#banner" class="name">Lynette Barrera</a>
     <div class="nav-links right">
-        <a>Projects</a>
-        <a>Contact</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </div>
 </div>
-<div class="banner">
+<div class="banner" id="banner">
     <div class="banner-inner">
         <h1>Lynette Barrera</h1>
         <p>Software Developer</p>
     </div>
 </div>
-<div class="pink">
+<div class="pink" id="about">
     <div class="container">
     <div class="row">
-        <div class="column one-half">
+        <div class="column two-fifths">
             <div class="computer">
                 <div class="outerScreen">
                     <div class="screen">
@@ -85,19 +85,32 @@
                 </div>
             </div>
         </div>
-        <div class="column one-half">
+        <div class="column three-fifths">
             <div class="about">
                 <h2>About Me</h2>
-                <p><code>public class Lynette {<br>
-
-
-                <br>}</code></p>
+                <p><code><span class="focus">public class Lynette {</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private static String<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="focus">currentlyLiving = "San Antonio, Texas";</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private static String[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="focus">education = ["Codeup", "Texas A&M International<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;University"];</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private static String<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="focus">major = "Mathematics";</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private static String[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="focus">skills = ["HTML", "CSS", "Javascript","JQuery",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Java", "Spring"];</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private static String[]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="focus">interests = ["Coding", "Knitting", "Crocheting"];</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;private static Boolean<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="focus">seekingEmployment = true;</span><br>
+                <span class="focus">}</span></code></p>
             </div>
         </div>
     </div>
     </div>
 </div>
-<div class="gray">
+<div class="light-blue" id="resume">
+    <div class="container">
+        <div class="row">
+            <div class="one-half offset">
+                <h2>Resume</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gray" id="projects">
     <div class="container projects">
         <div class="row">
             <h2>Projects</h2>
@@ -121,7 +134,7 @@
         </div>
     </div>
 </div>
-<div class="contact">
+<div class="contact" id="contact">
     <div class="container">
         <div class="row">
             <div class="one-half column">
