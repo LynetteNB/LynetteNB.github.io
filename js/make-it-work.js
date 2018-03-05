@@ -21,7 +21,7 @@ $(window).on("scroll", () => {
         $('code').show(1500);
     }
     else {
-        $('code').hide(1000);
+        $('code').hide();
     }
 });
 // Select all links with hashes
