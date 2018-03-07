@@ -18,10 +18,10 @@ $(window).on("scroll", () => {
 });
 $(window).on("scroll", () => {
     if($('.computer').visible(true)) {
-        $('code').show(2500);
+        $('code').slideDown(2000);
     }
     else {
-        $('code').hide(1000);
+        $('code').slideUp(1000);
     }
 });
 // Select all links with hashes
