@@ -133,7 +133,6 @@ p {
 }
 .pink{
     background: #FBD5DB;
-    min-height: 100%;
 }
 .about p{
     text-align: left;
@@ -149,7 +148,6 @@ p {
 }
 .light-blue {
     background: #C0FDFB;
-    min-height: 100%;
 }
 .paper {
     background: white;
@@ -228,11 +226,11 @@ p {
 .gray{
     background: #818183;
     color: white;
-    min-height: 100%;
 }
-.projects img, .contact img {
+.projects img {
     width: 100%;
     border-radius: 20px;
+    cursor: pointer;
 }
 .tag {
     border: 3px solid #64B6AC;
@@ -243,10 +241,146 @@ p {
 }
 .contact {
     background: #64B6AC;
-    min-height: 100%;
 }
 .contact img{
     border-radius: 50%;
     margin: 3.5vw 0;
+    width: 100%;
+}
+.modal{
+    display:none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modalContent {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 20px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*------------------------------------SIMON MODAL--------------------------------*/
+#simonContent {
+    width: 50%;
+    margin: 3% auto;
+    height: 45vw;
+}
+#simonContent h1 {
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 4vw;
+    margin: 1.5vw 0;
+}
+#simonContent button {
+    height: 3vw;
+    font-size: 2vw;
+    border-radius: 5px;
+    margin: 1vw;
+    font-family: 'VT323', monospace;
+}
+#simonContent button:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+.block {
+    width: 16.64816870144284vw;
+    height: 16.64816870144284vw;
+    margin: 1.1098779134295227vw;
+    overflow: hidden;
+}
+.top, .bottom {
+    display: flex;
+    justify-content: center;
+}
+.topRight {
+    border-top-right-radius: 100%;
+}
+.topLeft{
+    border-top-left-radius: 100%;
+}
+.bottomLeft{
+    border-bottom-left-radius: 100%;
+}
+.bottomRight{
+    border-bottom-right-radius: 100%;
+}
+.circle {
+    position: absolute;
+    width: 16vw;
+    height: 16vw;
+    border-radius: 50%;
+    background: white;
+    top: 11vw;
+    left: 17vw;
+}
+.red {
+    background: red;
+}
+.blue {
+    background: blue;
+}
+.yellow {
+    background: yellow;
+}
+.green {
+    background: green;
+}
+.muteRed {
+    background: #D97273;
+}
+.muteBlue {
+    background: #9acfea;
+}
+.muteYellow {
+    background: khaki;
+}
+.muteGreen {
+    background: #6CA559;
+}
+#game{
+    position: relative;
+}
+.overAnimation {
+    background: url("../img/simon-game-over.png");
+    background-size: 211vw 38.5vw;
+    position: absolute;
+    width: 42.2vw;
+    height: 40vw;
+    top: -.5vw;
+    left: 3.6vw;
+    animation:over 1s steps(5, end);
+    animation-fill-mode: forwards;
+}
+@keyframes over {
+    0%{background-position: 0 -.5vw;}
+    100%{background-position: -211vw;}
+}
+#html {
+    font-size: 6vw;
+    font-family: 'VT323', monospace;
+    position: absolute;
+    top: 16vw;
+    left: 24vw;
+    /*text-align: center;*/
 }
 

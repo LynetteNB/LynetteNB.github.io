@@ -18,12 +18,145 @@ $(window).on("scroll", () => {
 });
 $(window).on("scroll", () => {
     if($('.computer').visible(true)) {
-        $('code').slideDown(2000);
+        $('code').slideDown(1500);
     }
     else {
-        $('code').slideUp(1000);
+        $('code').slideUp(500);
     }
 });
+
+$("#simonImg").click(() => {
+   $("#simonModal.modal").css("display", "block");
+    let colorsArray = ["blue", "yellow", "green", "red"];
+    let simonArray = [];
+    let simonCheck = [];
+    let counter = 0;
+    let red = $("#red");
+    let blue = $("#blue");
+    let green = $("#green");
+    let yellow = $("#yellow");
+    $("button").hide();
+    $("#overAnimation").hide();
+
+    let getRandomColor = () => colorsArray[Math.floor((Math.random()*4))];
+    let upClickety = (color) => {
+        simonCheck.push(color);
+        $(`#${color}`).toggleClass(`mute${color[0].toUpperCase()}${color.substring(1, color.length)} ${color}`);
+        $(`#${color}Sound`)[0].play();
+        checkSimon();
+    };
+    let clicks = () => {
+        red.mousedown(() => red.toggleClass("muteRed red"));
+        blue.mousedown(() => blue.toggleClass("muteBlue blue"));
+        yellow.mousedown(() => yellow.toggleClass("muteYellow yellow"));
+        green.mousedown(() => green.toggleClass("muteGreen green"));
+        red.mouseup(() => upClickety("red"));
+        blue.mouseup(() => upClickety("blue"));
+        yellow.mouseup(() => upClickety("yellow"));
+        green.mouseup(() => upClickety("green"));
+    };
+    let offClicks = () => {
+        red.off();
+        yellow.off();
+        blue.off();
+        green.off();
+    };
+    let startGame = () => {
+        $(".top, .bottom").show();
+        randomColor = getRandomColor();
+        simonArray.push(randomColor);
+        $("#html").text(counter);
+        if (counter >= 10) {
+            $("#html").css("left", "22.5vw");
+        } else {
+            $("#html").css("left", "24vw");
+        }
+        counter++;
+        if (counter <= 5) {
+            showSimonArray(700);
+        } else if (counter <= 10) {
+            showSimonArray(650);
+        } else if (counter <= 15) {
+            showSimonArray(550);
+        } else if (counter <= 20) {
+            showSimonArray(500);
+        }
+    };
+    let colorChange = color => {
+        setTimeout(() => $(`#${color}`).toggleClass(`mute${color[0].toUpperCase()}${color.substring(1, color.length)} ${color}`),400);
+        $(`#${color}Sound`)[0].play();
+        $(`#${color}`).toggleClass(`mute${color[0].toUpperCase()}${color.substring(1, color.length)} ${color}`);
+    };
+    let simonGame = (color) => {
+        console.log(simonArray);
+        switch (color) {
+            case "red":
+                colorChange(color);
+                break;
+            case "blue":
+                colorChange(color);
+                break;
+            case "yellow":
+                colorChange(color);
+                break;
+            case "green":
+                colorChange(color);
+                break;
+        }
+    };
+    let showSimonArray = (time) => {
+        let i = 0;
+        let timer = setInterval(function(){
+            simonGame(simonArray[i]);
+            offClicks();
+            i++;
+            if (i >= simonArray.length) {
+                clearInterval(timer);
+                clicks();
+            }
+        }, time);
+    };
+    let checkSimon = () => {
+        let randomColor = "";
+        if (simonArray.length === 0){
+            startGame();
+            $("#html").css("top", "16vw");
+        }
+        for(let i = 0; i < simonCheck.length; i++) {
+            if(simonCheck[i] !== simonArray[i]){
+                $("#html").hide().css("left", "13.2vw").css("top", "10vw").fadeIn(3000).html("Game Over!<br><button>Play Again?</button>");
+                $("button").click(() => {
+                    simonCheck = [];
+                    simonArray = [];
+                    $("button").hide();
+                    $("#html").text("Game Over!");
+                    counter = 0;
+                    checkSimon();
+                });
+                $("#overAnimation").show().addClass("overAnimation");
+                setTimeout(() => {$(".top, .bottom").hide();}, 10);
+                setTimeout(() => {$("#overAnimation").hide();}, 900);
+                $("#lose")[0].play();
+                offClicks();
+                break;
+            }
+            if((simonCheck[simonCheck.length-1] === simonArray[simonArray.length-1] && simonCheck.length === simonArray.length)){
+                simonCheck = [];
+                startGame();
+            }
+        }
+    };
+    checkSimon();
+});
+$(".close").click(() => {
+    $(".modal").css("display", "none");
+});
+
+
+
+
+
+//--------------------------------------------------------------------------------------------
 // Select all links with hashes
 $('a[href*="#"]')
 // Remove links that don't actually link to anything

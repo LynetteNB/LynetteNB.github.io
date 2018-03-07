@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meet Lynette</title>
-    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Ubuntu|VT323" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/css-computer.css">
     <link rel="stylesheet" href="css/style-it.css">
@@ -119,6 +119,10 @@
                             <p><i class="fas fa-envelope"></i> Lynette.N.Barrera@gmail.com</p>
                             <p><i class="fas fa-home"></i> 8603 N Loop 1604 W Apt 1210<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;San Antonio, TX 78249</p>
                         </div>
+                        <div class="resumeSummary">
+                            <h4>Summary</h4>
+                            <p>As an entry level software developer, I am excited to continue learning and growing in this field. I enjoy creating and utilizing my knowledge in mathematics to solve problems for an aesthetically pleasing and highly functional end result - whether that be with coding, designing, or knitting.</p>
+                        </div>
                         <div class="resumeLanguages">
                             <h4>Languages</h4>
                             <p>HTML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--------------------<i class="fas fa-spin fa-sync"></i>--------------</p>
@@ -140,6 +144,9 @@
                                 </div>
                             </div>
                         </div>
+
+                    </div>
+                    <div class="rightColumn five-eighths column">
                         <div class="resumeEducation">
                             <h4>Education</h4>
                             <dl>
@@ -148,12 +155,6 @@
                                 <dt>Aug 2008 - Dec 2012</dt>
                                 <dd><strong>Texas A&M International University</strong><br><em>Bachelor of Arts Degree | Major: Math | Minor: Economics | GPA: 3.7</em></dd>
                             </dl>
-                        </div>
-                    </div>
-                    <div class="rightColumn five-eighths column">
-                        <div class="resumeSummary">
-                            <h4>Summary</h4>
-                            <p>As an entry level software developer, I am excited to continue learning and growing in this field. I enjoy creating and utilizing my knowledge in mathematics to solve problems for an aesthetically pleasing and highly functional end result - whether that be with coding, designing, or knitting.</p>
                         </div>
                         <div class="resumeExperience">
                             <h4>Experience</h4>
@@ -180,7 +181,6 @@
                                 <ul class="fa-ul">
                                     <li><span class="fa-li"><i class="fas fa-code"></i></span>Special Program Aid Helped organize the activities for the TexPrep program hosted at the Texas A&M International University campus.</li>
                                     <li><span class="fa-li"><i class="fas fa-code"></i></span>Responsible for monitoring TexPrep students, ages 11 to 17, during class changes.</li>
-                                    <li><span class="fa-li"><i class="fas fa-code"></i></span>Substituted for classes when no instructor was available.</li>
                                     <li><span class="fa-li"><i class="fas fa-code"></i></span>Supervised the volunteers helping with the program.</li>
                                 </ul>
                             </dl>
@@ -205,7 +205,7 @@
                 <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span><span class="tag">API</span><span class="tag">JQuery</span><span class="tag">AJAX</span><span class="tag">JSON</span></p>
             </div>
             <div class="one-third column">
-                <img src="http://via.placeholder.com/350x250" alt="">
+                <img src="http://via.placeholder.com/350x250" alt="" id="simonImg">
                 <h3>Simon Says</h3>
                 <p>Using jquery, javascript, and css, I made a simon says game.</p>
                 <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span><span class="tag">JQuery</span></p>
@@ -215,6 +215,32 @@
                 <h3>Simon Says</h3>
                 <p>Using jquery, javascript, and css, I made a simon says game.</p>
             </div>
+        </div>
+    </div>
+</div>
+<div class="projectModals">
+    <div class="modal" id="simonModal">
+        <div class="modalContent" id="simonContent">
+            <span class="close">&times;</span>
+            <h1>Simon Says!</h1>
+            <div id="game">
+                <div class="top">
+                    <div class="block muteRed topLeft" id="red"></div>
+                    <div class="block muteBlue topRight" id="blue"></div>
+                </div>
+                <div class="circle"></div>
+                <div id="html"></div>
+                <div class="bottom">
+                    <div class="block muteYellow bottomLeft" id="yellow"></div>
+                    <div class="block muteGreen bottomRight" id="green"></div>
+                </div>
+                <div id="overAnimation"></div>
+            </div>
+            <audio src="sound/beep-02.mp3" id="redSound" preload="auto"></audio>
+            <audio src="sound/beep-07.mp3" id="blueSound" preload="auto"></audio>
+            <audio src="sound/beep-03.mp3" id="greenSound" preload="auto"></audio>
+            <audio src="sound/beep-08b.mp3" id="yellowSound" preload="auto"></audio>
+            <audio src="sound/Pacman-death-sound/Pacman-death-sound.mp3" id="lose" preload="auto"></audio>
         </div>
     </div>
 </div>
