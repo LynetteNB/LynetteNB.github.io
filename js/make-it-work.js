@@ -3,7 +3,7 @@ $('.name').hide();
 $('code').hide();
 
 $(window).on("scroll", () => {
-    if($('.about p').visible(true)) {
+    if($('.computer').visible(true)) {
         $('.heading h1').addClass("type").show();
     } else {
         $('.heading h1').removeClass("type").hide();
@@ -17,11 +17,11 @@ $(window).on("scroll", () => {
     }
 });
 $(window).on("scroll", () => {
-    if($('.about p').visible(true)) {
-        $('code').show(1500);
+    if($('.computer').visible(true)) {
+        $('code').show(2500);
     }
     else {
-        $('code').hide();
+        $('code').hide(1000);
     }
 });
 // Select all links with hashes
