@@ -10,6 +10,7 @@ body {
     color: #5D737E;
     width: 100%;
     height: 100%;
+    font-size: 1.25vw;
 }
 h1{
    font-size: 4vw;
@@ -21,9 +22,11 @@ h2 {
 h3 {
     font-size: 2.3vw;
 }
+h4 {
+    font-size: 2.1vw;
+}
 p {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.5vw;
 }
 .container {
     margin: 0 auto;
@@ -57,11 +60,20 @@ p {
 .column.three-fifths{
     width: 60%;
 }
+.column.three-eighths{
+    width: 37.5%;
+}
+.column.five-eighths{
+    width: 62.5%;
+}
 .column.one-half{
     width: 50%;
 }
 .column.three-fourths{
     width: 75%;
+}
+.column.three-fourths.offset{
+    margin-left: 12.5%;
 }
 .column.one-third {
     width: 33.33%;
@@ -125,7 +137,6 @@ p {
 }
 .about p{
     text-align: left;
-    font-size: 1.25vw;
     background: #5D737E;
     color: #64B6AC;
     padding: 1.5vw;
@@ -144,7 +155,75 @@ p {
     background: white;
     border-radius: 15px;
     width: 100%;
-    height: 50vw;
+    height: 83.2vw;
+    text-align: left;
+
+}
+.paper h4 {
+    margin: 1vw 0;
+}
+.paper dd, .paper dt, .paper li{
+    margin-top: .4vw;
+}
+.paper dd {
+    margin-left: 2.5vw;
+}
+.paper ul {
+    padding-left: 1.5vw;
+}
+.leftColumn{
+    background: #64B6AC;
+    color: white;
+    height: 100%;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+.professionalImg img {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    width: 80%;
+    margin: 1vw 0;
+}
+.leftColumn h3{
+    text-align: center;
+    margin-top: 1.5vw;
+    margin-bottom: 2.5vw;
+    font-size: 2.45vw;
+}
+.resumeContact span {
+    color: white;
+    text-decoration: none;
+}
+.toolsList{
+    display: flex;
+}
+.resumeTools p{
+    margin: .75vw;
+}
+.professionalImg{
+    text-align: center;
+}
+.downloadResume{
+    color: #fafafa;
+    background: #64B6AC;
+    padding: .75vw;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.downloadResume:hover{
+    color: #5D737E;
+    background: #fafafa;
+}
+.downloadResume:active{
+    background: #818183;
+    color: #fafafa;
+}
+.rightColumn {
+    height: 100%;
 }
 .gray{
     background: #818183;
