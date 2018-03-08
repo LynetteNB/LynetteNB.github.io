@@ -278,6 +278,22 @@ p {
     text-decoration: none;
     cursor: pointer;
 }
+.popUp{
+    animation: pop-up .25s linear;
+    transform-origin: 50%;
+}
+.popDown{
+    animation: pop-down .25s linear;
+    transform-origin: 50%;
+}
+@keyframes pop-up {
+    0%{transform: scale(0, 0)}
+    100%{transform: scale(1,1)}
+}
+@keyframes pop-down {
+    0%{transform: scale(1, 1)}
+    100%{transform: scale(0,0)}
+}
 /*------------------------------------SIMON MODAL--------------------------------*/
 #simonContent {
     width: 50%;
@@ -296,9 +312,10 @@ p {
     border-radius: 5px;
     margin: 1vw;
     font-family: 'VT323', monospace;
+    color: #5D737E;
 }
 #simonContent button:hover {
-    background: black;
+    background: #5D737E;
     color: white;
     cursor: pointer;
 }

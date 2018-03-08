@@ -26,7 +26,7 @@ $(window).on("scroll", () => {
 });
 
 $("#simonImg").click(() => {
-    $("#simonModal.modal").css("display", "block");
+    $("#simonModal.modal").removeClass("popDown").css("display", "block").addClass("popUp");
     let colorsArray = ["blue", "yellow", "green", "red"];
     let simonArray = [];
     let simonCheck = [];
@@ -147,11 +147,12 @@ $("#simonImg").click(() => {
         }
     };
     $("#startSimon").click(checkSimon);
-    $(".close").click(() => {
-        $(".modal").css("display", "none");
-        $("#html").html("<button id=\"startSimon\">Start</button>");
-        clearInterval(timer);
-    });
+});
+$(".close").click(() => {
+    $(".modal").addClass("popDown").removeClass("popUp");
+    setTimeout(() => $(".modal").css("display", "none"), 250);
+    $("#html").html("<button id=\"startSimon\">Start</button>");
+    clearInterval(timer);
 });
 
 
