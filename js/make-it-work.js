@@ -77,9 +77,9 @@ $("#simonImg").click(() => {
         } else if (counter <= 10) {
             showSimonArray(650);
         } else if (counter <= 15) {
+            showSimonArray(600);
+        } else if (counter <= 50) {
             showSimonArray(550);
-        } else if (counter <= 20) {
-            showSimonArray(500);
         }
     };
     let colorChange = color => {
@@ -150,7 +150,7 @@ $("#simonImg").click(() => {
 });
 $(".close").click(() => {
     $(".modal").addClass("popDown").removeClass("popUp");
-    setTimeout(() => $(".modal").css("display", "none"), 250);
+    setTimeout(() => $(".modal").css("display", "none"), 240);
     $("#html").html("<button id=\"startSimon\">Start</button>");
     clearInterval(timer);
 });
@@ -160,7 +160,7 @@ $(".close").click(() => {
 
 
 
-//--------------------------------------------------------------------------------------------
+//------------------------https://css-tricks.com/snippets/jquery/smooth-scrolling/--------------------------------------
 // Select all links with hashes
 $('a[href*="#"]')
 // Remove links that don't actually link to anything
