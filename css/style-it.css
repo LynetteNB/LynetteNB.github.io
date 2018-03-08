@@ -308,6 +308,11 @@ p {
     margin: 1.1098779134295227vw;
     overflow: hidden;
 }
+#startSimon{
+    position: absolute;
+    left: -2.2vw;
+    top: auto;
+}
 .top, .bottom {
     display: flex;
     justify-content: center;
@@ -380,7 +385,7 @@ p {
     font-family: 'VT323', monospace;
     position: absolute;
     top: 16vw;
-    left: 24vw;
+    left: 23.7vw;
     /*text-align: center;*/
 }
 

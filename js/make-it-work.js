@@ -26,16 +26,16 @@ $(window).on("scroll", () => {
 });
 
 $("#simonImg").click(() => {
-   $("#simonModal.modal").css("display", "block");
+    $("#simonModal.modal").css("display", "block");
     let colorsArray = ["blue", "yellow", "green", "red"];
     let simonArray = [];
     let simonCheck = [];
     let counter = 0;
+    let timer;
     let red = $("#red");
     let blue = $("#blue");
     let green = $("#green");
     let yellow = $("#yellow");
-    $("button").hide();
     $("#overAnimation").hide();
 
     let getRandomColor = () => colorsArray[Math.floor((Math.random()*4))];
@@ -69,7 +69,7 @@ $("#simonImg").click(() => {
         if (counter >= 10) {
             $("#html").css("left", "22.5vw");
         } else {
-            $("#html").css("left", "24vw");
+            $("#html").css("left", "23.7vw");
         }
         counter++;
         if (counter <= 5) {
@@ -105,19 +105,20 @@ $("#simonImg").click(() => {
         }
     };
     let showSimonArray = (time) => {
-        let i = 0;
-        let timer = setInterval(function(){
-            simonGame(simonArray[i]);
-            offClicks();
-            i++;
-            if (i >= simonArray.length) {
-                clearInterval(timer);
-                clicks();
-            }
-        }, time);
+            let i = 0;
+            timer = setInterval(function () {
+                simonGame(simonArray[i]);
+                offClicks();
+                i++;
+                if (i >= simonArray.length) {
+                    clearInterval(timer);
+                    clicks();
+                }
+            }, time);
     };
     let checkSimon = () => {
         let randomColor = "";
+        $("#startSimon").hide();
         if (simonArray.length === 0){
             startGame();
             $("#html").css("top", "16vw");
@@ -129,7 +130,6 @@ $("#simonImg").click(() => {
                     simonCheck = [];
                     simonArray = [];
                     $("button").hide();
-                    $("#html").text("Game Over!");
                     counter = 0;
                     checkSimon();
                 });
@@ -146,11 +146,14 @@ $("#simonImg").click(() => {
             }
         }
     };
-    checkSimon();
+    $("#startSimon").click(checkSimon);
+    $(".close").click(() => {
+        $(".modal").css("display", "none");
+        $("#html").html("<button id=\"startSimon\">Start</button>");
+        clearInterval(timer);
+    });
 });
-$(".close").click(() => {
-    $(".modal").css("display", "none");
-});
+
 
 
 
