@@ -470,9 +470,9 @@ p {
     z-index: 1;
     color: white;
     position: absolute;
-    font-size: 3vw;
-    top: 35vw;
-    left: 48.5vw;
+    font-size: 1.1vw;
+    top: 1.65vw;
+    left: 2.1vw;
 }
 #warning {
     background: #f3dede;
