@@ -236,7 +236,8 @@ $(".close").click(() => {
         $("#html").css({
             top: "16vw",
             left: "23.7vw"
-        })
+        });
+        $("#smile").removeClass().addClass("smile");
     }, 240);
     clearInterval(timer);
 });
