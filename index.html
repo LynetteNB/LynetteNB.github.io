@@ -199,21 +199,29 @@
         <div class="row">
             <h2>Projects</h2>
             <div class="one-third column">
-                <img src="http://via.placeholder.com/350x250" alt="">
-                <h3>Weather Project</h3>
-                <p>Using ajax requests and jquery, the weather project </p>
-                <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span><span class="tag">API</span><span class="tag">JQuery</span><span class="tag">AJAX</span><span class="tag">JSON</span></p>
+                <img src="img/pomodoro-img.png" alt="pomodoro-clock" id="pomodoroImg">
+                <h3>Pomodoro Clock: Be Productive</h3>
+                <p>The Pomodoro Technique is a great time management method so after much testing and waiting, finishing this project brought me a rewarding result I myself can use for future projects.</p>
+                <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span><span class="tag">JQuery</span></p>
             </div>
             <div class="one-third column">
-                <img src="http://via.placeholder.com/350x250" alt="" id="simonImg">
-                <h3>Simon Says</h3>
-                <p>Using jquery, javascript, and css, I made a simon says game.</p>
+                <img src="img/simon-img.png" alt="simon-says" id="simonImg">
+                <h3>Simon Says!</h3>
+                <p>This old classic game was a fun project with some challenging aspects that required me to learn more about Javascript's asynchronous component.</p>
                 <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span><span class="tag">JQuery</span></p>
             </div>
             <div class="one-third column">
                 <img src="http://via.placeholder.com/350x250" alt="">
                 <h3>Simon Says</h3>
                 <p>Using jquery, javascript, and css, I made a simon says game.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="one-third column">
+                <img src="http://via.placeholder.com/350x250" alt="">
+                <h3>Weather Project</h3>
+                <p>Using ajax requests and jquery, the weather project </p>
+                <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span><span class="tag">API</span><span class="tag">JQuery</span><span class="tag">AJAX</span><span class="tag">JSON</span></p>
             </div>
         </div>
     </div>
@@ -241,6 +249,40 @@
             <audio src="sound/beep-03.mp3" id="greenSound" preload="auto"></audio>
             <audio src="sound/beep-08b.mp3" id="yellowSound" preload="auto"></audio>
             <audio src="sound/Pacman-death-sound/Pacman-death-sound.mp3" id="lose" preload="auto"></audio>
+        </div>
+    </div>
+    <div class="modal" id="pomodoroModal">
+        <div class="modalContent" id="pomodoroContent">
+            <span class="close">&times;</span>
+            <h1>Pomodoro Clock: Be Productive</h1>
+            <div id="clock">
+                <i id="statusIcon" class="fas fa-code"></i>
+                <div class="tomato">
+                    <div class="leafUp"></div>
+                    <div class="leafDown"></div>
+                    <div class="eye leftEye"></div>
+                    <div class="eye rightEye"></div>
+                    <div class="smile" id="smile">
+                        <div id="timer"></div>
+                    </div>
+                </div>
+            </div>
+            <form>
+                <div class="pomodoroButtons">
+                    <button id="startClock">Start!</button>
+                    <button id="updateClock">Stop</button>
+                </div>
+                <div id="warning">Please enter a valid time under 60 mins!</div>
+                <label for="workIntervals"><i class="fas fa-code"></i> Work Intervals: </label>
+                <input type="text" value="25" id="workIntervals" name="workIntervals"> mins |
+                <label for="shortBreakDuration"><i class="fas fa-coffee"></i> Short Break: </label>
+                <input type="text" value="5" id="shortBreakDuration" name="workIntervals"> mins<br>
+                <label for="longBreakDuration"><i class="fas fa-coffee"></i>+ Long Break: </label>
+                <input type="text" value="30" id="longBreakDuration" name="workIntervals"> mins
+                <p>Note: Timer will continue to run until stopped, even after modal is closed.</p>
+            </form>
+            <audio src="sound/Warning-alarm/Warning-alarm.mp3" id="shortBreak" preload="auto"></audio>
+            <audio src="sound/Alarm-tone/Alarm-tone.mp3" id="longBreak" preload="auto"></audio>
         </div>
     </div>
 </div>

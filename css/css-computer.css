@@ -32,7 +32,7 @@
     border-right: 3px solid #5D737E;
     white-space: nowrap;
     overflow: hidden;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
     animation-fill-mode: both;
     font-size: 3.72vw;
 }

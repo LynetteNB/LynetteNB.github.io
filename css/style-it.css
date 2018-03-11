@@ -232,6 +232,10 @@ p {
     border-radius: 20px;
     cursor: pointer;
 }
+.projects img:hover{
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 10px 10px #5D737E;
+}
 .tag {
     border: 3px solid #64B6AC;
     padding: .5vw;
@@ -248,7 +252,6 @@ p {
     width: 100%;
 }
 .modal{
-    display:none;
     position: fixed;
     z-index: 10;
     left: 0;
@@ -258,6 +261,9 @@ p {
     overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
+}
+#simonModal, #pomodoroModal{
+    display:none;
 }
 .modalContent {
     background-color: #fefefe;
@@ -287,14 +293,200 @@ p {
     transform-origin: 50%;
 }
 @keyframes pop-up {
-    0%{transform: scale(0, 0)}
+    0%{transform: scale(.5, .5)}
     100%{transform: scale(1,1)}
 }
 @keyframes pop-down {
     0%{transform: scale(1, 1)}
-    100%{transform: scale(0,0)}
+    100%{transform: scale(.3,.3)}
+}
+
+/*----------------------------------POMODORO MODAL-------------------------------*/
+
+#pomodoroContent {
+    width: 65%;
+    margin: 3% auto;
+    height: 47vw;
+    font-size: 1.6vw;
+}
+#pomodoroContent h1 {
+    text-align: center;
+    font-size: 4vw;
+    margin: 1.5vw 0;
+}
+.tomato{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background: #d0433a;
+    margin: 1vw auto;
+    box-shadow: inset 1vw -1vw 0 #92090a;
+}
+.leafUp, .leafDown {
+    transform: rotateX(38deg);
+}
+.leafUp{
+    position: relative;
+    top: -2.5vw;
+    left: 4.8vw;
+    width: 0;
+    height: 0;
+    border-bottom: 9vw solid #1c9d34;
+    border-top:0 solid transparent;
+    border-left:10vw solid transparent;
+    border-right: 10vw solid transparent;
+}
+.leafDown{
+    position: relative;
+    top: -9.5vw;
+    left: 4.8vw;
+    width: 0;
+    height: 0;
+    border-top: 11vw solid #1c9d34;
+    border-bottom:0 solid transparent;
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
+}
+.eye{
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    background: black;
+}
+.eye:after{
+    content: "";
+    background: white;
+    position: absolute;
+    width: .6vw;
+    height: .6vw;
+    border-radius: 50%;
+    top: .5vw;
+    left: .5vw;
+}
+.eye.leftEye{
+    position: relative;
+    left: 8.5vw;
+    top: -8vw;
+}
+.eye.rightEye{
+    position: relative;
+    right: -18.5vw;
+    top: -10.5vw;
+}
+.smile{
+    width: 2.3vw;
+    height: 1.6vw;
+    border-radius: 100%/0 0 4vw 4vw;
+    border: .25vw solid;
+    border-color: transparent transparent #000 transparent;
+    position: relative;
+    top: -10.5vw;
+    left: 13.6vw;
+}
+.smileAnimation{
+    width: 2.3vw;
+    height: 1.6vw;
+    border-radius: 100%/0 0 4vw 4vw;
+    border: .25vw solid;
+    border-color: transparent transparent #000 transparent;
+    position: relative;
+    top: -10.5vw;
+    left: 13.6vw;
+    animation: smallSmile 1s;
+}
+.bigSmile{
+    animation: bigSmile 1s;
+    animation-fill-mode: forwards;
+    border-color: #000;
+    background: #000;
+    width: 5.5vw;
+    height: 3vw;
+    border-radius: 100%/0 0 5vw 5vw;
+    position: relative;
+    top: -4.5vw;
+    left: 12.5vw;
+    transform-origin: 50% 50%;
+    color: white;
+
+}
+@keyframes bigSmile {
+    0% {
+        transform: scale(1, 1);
+        top: -10.5vw;
+    }
+    100% {
+        transform: scale(3, 3);
+        top: -4.5vw;
+    }
+}
+@keyframes smallSmile {
+    0% {
+        transform: scale(3, 3);
+        top: -4.5vw;
+    }
+    100% {
+        transform: scale(1, 1);
+        top: -10.5vw;
+    }
+}
+#timer{
+    padding: .2vw;
+    font-size: 1.5vw;
+}
+.pomodoroButtons {
+    display: block;
+    margin: .3vw auto;
+}
+#pomodoroContent input {
+    width: 1.75vw;
+    font-family: Ubuntu, monospace;
+    font-size: 1.3vw;
+}
+#pomodoroContent button {
+    color: white;
+    background: #d0433a;
+    border-radius: 10px;
+    padding: .5vw;
+    margin: .5vw;
+    font-family: Ubuntu, monospace;
+    width: 6vw;
+    font-size: 1.7vw;
+    cursor: pointer;
+}
+#pomodoroContent button:hover {
+    color: black;
+}
+#pomodoroContent button:active {
+    background: black;
+    color: white;
+}
+#pomodoroContent button:disabled,
+#pomodoroContent button[disabled]{
+    background: #92090a;
+    cursor: default;
+    color: #b7b7b7;
+}
+#statusIcon{
+    z-index: 1;
+    color: white;
+    position: absolute;
+    font-size: 3vw;
+    top: 35vw;
+    left: 48.5vw;
+}
+#warning {
+    background: #f3dede;
+    color: #a94442;
+    border-radius: 10px;
+    padding: .75vw;
+    margin: .25vw 0;
+}
+#pomodoroContent p{
+    font-size: 1vw;
+    margin: .25vw;
 }
 /*------------------------------------SIMON MODAL--------------------------------*/
+
 #simonContent {
     width: 50%;
     margin: 3% auto;

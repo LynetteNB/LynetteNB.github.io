@@ -1,37 +1,117 @@
 $('.heading h1').hide();
 $('.name').hide();
 $('code').hide();
+$('.paper p, .paper dl, .paper h4').hide();
+$('.projects .column').hide();
 
-$(window).on("scroll", () => {
-    if($('.computer').visible(true)) {
-        $('.heading h1').addClass("type").show();
-    } else {
-        $('.heading h1').removeClass("type").hide();
-    }
-});
 $(window).on("scroll", () => {
     if($('.banner-inner h1').visible(true) === false) {
         $('.name').fadeIn();
     } else {
         $('.name').fadeOut();
     }
-});
-$(window).on("scroll", () => {
     if($('.computer').visible(true)) {
+        $('.heading h1').addClass("type").show();
         $('code').slideDown(1500);
     }
-    else {
-        $('code').slideUp(500);
+    if($('.paper').visible(true)) {
+        $('.paper p, .paper dl, .paper h4').slideDown(1500);
+    }
+    if($('.gray .row').visible()){
+        $('.projects .column').slideDown(1500);
     }
 });
 
+//------------------------------------------------POMODORO CLOCK--------------------------------------------------------
+$("#timer").hide();
+$("#statusIcon").hide();
+$("#updateClock").attr("disabled", "disabled");
+let pomodoroIntervalID;
+$("#pomodoroImg").click(() => {
+    $("#pomodoroModal").removeClass("popDown").css("display", "block").addClass("popUp");
+    $("#warning").hide();
+});
+$("#startClock").click((e)=>{
+    e.preventDefault();
+    $("#updateClock").removeAttr("disabled");
+    $("#startClock").attr("disabled", "disabled");
+    if(timerCheck("workIntervals") && timerCheck("shortBreakDuration") && timerCheck("longBreakDuration")) {
+        $("#warning").slideUp();
+        $("#smile").removeClass("smile").addClass("bigSmile");
+        let minutes = $("#workIntervals").val();
+        let seconds = 0;
+        let shortBreak = $("#shortBreakDuration").val();
+        let longBreak = $("#longBreakDuration").val();
+        let counter = 1;
+        let status = "work";
+        pomodoroIntervalID = setInterval(() => {
+            if(counter % 4 === 0 && status === "work" && minutes === 0 && seconds === 0){
+                $("#timer").text(minutes + ":0" + seconds);
+                minutes = longBreak;
+                status = "break";
+                $("#statusIcon").hide().removeClass().addClass("fas fa-coffee").text("+").fadeIn(500);
+                $("#longBreak")[0].play();
+            } else if(counter % 4 === 0 && status === "break" && minutes === 0 && seconds === 0){
+                $("#timer").text(minutes + ":0" + seconds);
+                minutes = $("#workIntervals").val();
+                status = "work";
+                counter += 1;
+                $("#statusIcon").hide().removeClass().addClass("fas fa-code").text("").fadeIn(500);
+                $("#longBreak")[0].play();
+            } else if (minutes === 0 && seconds === 0 && status === "work") {
+                $("#timer").text(minutes + ":0" + seconds);
+                minutes = shortBreak;
+                status = "break";
+                $("#statusIcon").hide().removeClass().addClass("fas fa-coffee").fadeIn(500);
+                $("#shortBreak")[0].play();
+            } else if (minutes === 0 && seconds === 0 && status === "break") {
+                $("#timer").text(minutes + ":0" + seconds);
+                minutes = $("#workIntervals").val();
+                status = "work";
+                counter += 1;
+                $("#statusIcon").hide().removeClass().addClass("fas fa-code").fadeIn(500);
+                $("#shortBreak")[0].play();
+            } else if (seconds === 0) {
+                $("#timer").text(minutes + ":0" + seconds);
+                seconds = 59;
+                minutes -= 1;
+            } else if (seconds < 10) {
+                $("#timer").text(minutes + ":0" + seconds);
+                seconds -=1;
+            } else if (seconds >= 10 && seconds < 60){
+                $("#timer").text(minutes + ":" + seconds);
+                seconds -= 1;
+            }
+            $("#statusIcon").fadeIn(1000);
+            $("#timer").fadeIn(1000);
+        }, 1000);
+    }
+    else{
+        $("#warning").slideDown();
+    }
+});
+let timerCheck = (id) => {
+    return Number($(`#${id}`).val())%1 === 0 && Number($(`#${id}`).val()) > 0 && !isNaN(Number($(`#${id}`).val())) && Number($(`#${id}`).val()) <= 60;
+};
+$("#updateClock").click((e) =>{
+    e.preventDefault();
+    $("#timer").hide();
+    $("#statusIcon").hide();
+    $("#smile").removeClass("bigSmile").addClass("smileAnimation");
+    clearInterval(pomodoroIntervalID);
+    $("#startClock").removeAttr("disabled");
+    $("#updateClock").attr("disabled", "disabled");
+});
+
+
+//-----------------------------------------------SIMON SAYS GAME--------------------------------------------------------
+let timer;
 $("#simonImg").click(() => {
-    $("#simonModal.modal").removeClass("popDown").css("display", "block").addClass("popUp");
+    $("#simonModal").removeClass("popDown").css("display", "block").addClass("popUp");
     let colorsArray = ["blue", "yellow", "green", "red"];
     let simonArray = [];
     let simonCheck = [];
     let counter = 0;
-    let timer;
     let red = $("#red");
     let blue = $("#blue");
     let green = $("#green");
@@ -88,7 +168,6 @@ $("#simonImg").click(() => {
         $(`#${color}`).toggleClass(`mute${color[0].toUpperCase()}${color.substring(1, color.length)} ${color}`);
     };
     let simonGame = (color) => {
-        console.log(simonArray);
         switch (color) {
             case "red":
                 colorChange(color);
@@ -150,14 +229,17 @@ $("#simonImg").click(() => {
 });
 $(".close").click(() => {
     $(".modal").addClass("popDown").removeClass("popUp");
-    setTimeout(() => $(".modal").css("display", "none"), 240);
-    $("#html").html("<button id=\"startSimon\">Start</button>");
+    setTimeout(() => {
+        $(".modal").css("display", "none");
+        $("#html").html("<button id=\"startSimon\">Start</button>");
+        $(".top, .bottom").show();
+        $("#html").css({
+            top: "16vw",
+            left: "23.7vw"
+        })
+    }, 240);
     clearInterval(timer);
 });
-
-
-
-
 
 
 //------------------------https://css-tricks.com/snippets/jquery/smooth-scrolling/--------------------------------------
