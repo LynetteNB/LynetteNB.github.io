@@ -3,6 +3,7 @@ $('.name').hide();
 $('code').hide();
 $('.paper p, .paper dl, .paper h4').hide();
 $('.projects .column').hide();
+$('.contactIcons').hide();
 
 $(window).on("scroll", () => {
     if($('.banner-inner h1').visible(true) === false) {
@@ -19,6 +20,9 @@ $(window).on("scroll", () => {
     }
     if($('.gray .row').visible()){
         $('.projects .column').slideDown(1500);
+    }
+    if($('.contact h2').visible(true)) {
+        $('.contactIcons').slideDown(1500);
     }
 });
 

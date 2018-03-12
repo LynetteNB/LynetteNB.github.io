@@ -2,7 +2,7 @@
 
 .computer {
     width: 100%;
-    margin-top: 50%;
+    margin-top: 25%;
 }
 .outerScreen{
     width: 100%;
@@ -22,10 +22,15 @@
     top: 1.11vw;
     left: 3.33%;
 }
+.compEyes{
+    position: absolute;
+    top: 11vw;
+    left: 1vw;
+}
 .heading {
     width: 76.67%;
     margin: 0 auto;
-    padding: 2.777vw 0;
+    padding: 6.777vw 0;
 }
 .type{
     animation: typing 2s steps(13, end), blinking .9s step-end infinite;

@@ -140,7 +140,7 @@ p {
     color: #64B6AC;
     padding: 1.5vw;
     border-radius: 10px;
-    height: 55vw;
+    height: 33.5vw;
     line-height: 2vw;
 }
 .focus{
@@ -226,6 +226,7 @@ p {
 .gray{
     background: #818183;
     color: white;
+    height: 53vw;
 }
 .projects img {
     width: 100%;
@@ -245,11 +246,34 @@ p {
 }
 .contact {
     background: #64B6AC;
+    color: white;
 }
 .contact img{
     border-radius: 50%;
-    margin: 3.5vw 0;
-    width: 100%;
+    margin: 0;
+    width: 90%;
+}
+.contact a{
+    display: block;
+    font-size: 1.75vw;
+    color: white;
+    text-decoration: none;
+}
+.contact i{
+    font-size: 2.5vw;
+}
+.contact a{
+    margin: 5% 5%;
+}
+.contact a:hover{
+    color: #C0FDFB;
+}
+.contact a:active{
+    color: #FBD5DB;
+}
+hr {
+    width: 25%;
+    border: 1px solid white;
 }
 .modal{
     position: fixed;
@@ -505,6 +529,7 @@ p {
     margin: 1vw;
     font-family: 'VT323', monospace;
     color: #5D737E;
+    background: white;
 }
 #simonContent button:hover {
     background: #5D737E;
