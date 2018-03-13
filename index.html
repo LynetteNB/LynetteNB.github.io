@@ -215,10 +215,10 @@
                 <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span><span class="tag">JQuery</span></p>
             </div>
             <div class="one-third column">
-                <img src="http://via.placeholder.com/350x250" alt="">
+                <img src="img/weather-img.png" alt="" id="weatherImg">
                 <h3>Weather Project</h3>
-                <p>Using jquery, javascript, and css, I made a simon says game.</p>
-                <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span><span class="tag">JQuery</span><span class="tag">AJAX</span></p>
+                <p>Creating this project gave me experience in using jQuery and AJAX requests. Applying the JSON data, the forecast for 5 days can be obtained, manipulated, and displayed using HTML and CSS.</p>
+                <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span><span class="tag">JQuery</span><span class="tag">AJAX</span><span class="tag">API</span><span class="tag">JSON</span></p>
             </div>
         </div>
     </div>
@@ -283,6 +283,56 @@
             <audio src="sound/Alarm-tone/Alarm-tone.mp3" id="longBreak" preload="auto"></audio>
         </div>
     </div>
+    <div class="modal" id="weatherModal">
+        <div class="modalContent" id="weatherContent">
+            <span class="close">&times;</span>
+            <div class="sun"></div>
+            <div class="cloud top">
+                <div class="circ1"></div>
+                <div class="circ2"></div>
+                <div class="circ3"></div>
+            </div>
+            <div class="cloud mid">
+                <div class="circ1"></div>
+                <div class="circ2"></div>
+                <div class="circ3"></div>
+            </div>
+            <div class="cloud bottom">
+                <div class="circ1"></div>
+                <div class="circ2"></div>
+                <div class="circ3"></div>
+            </div>
+            <h1>Weather Project</h1>
+            <div class="weatherOptions">
+                <div class="searchOptions">
+                    <input type="text" id="address" placeholder="Search by Place">
+                    <button id="searchPlace">Submit</button>
+                </div>
+                <div class="checkboxes">
+                    <label><input type="checkbox" id="iconShow" name="description" checked>Icon</label>
+                    <label><input type="checkbox" id="descriptionShow" name="description" checked>Description</label>
+                    <label><input type="checkbox" id="humidityShow" name="description" checked>Humidity</label>
+                    <label><input type="checkbox" id="windShow" name="description">Wind</label>
+                    <label><input type="checkbox" id="pressureShow" name="description">Pressure</label>
+                </div>
+                <div class="dayOptions">
+                    <select name="daysNumber" id="daysNumber" class="button">
+                        <option value="1">1-Day Forecast</option>
+                        <option value="3" selected>3-Day Forecast</option>
+                        <option value="4">4-Day Forecast</option>
+                        <option value="5">5-Day Forecast</option>
+                    </select>
+                </div>
+            </div>
+            <main>
+                <h3 class="city"></h3>
+                <div class="headers"></div>
+                <div class="weather"></div>
+                <p class="instruct">Click on the map for the weather!</p>
+                <div id="map"></div>
+            </main>
+        </div>
+    </div>
 </div>
 <div class="contact" id="contact">
     <div class="container">
@@ -293,9 +343,9 @@
             <div class="three-fifths column">
                 <h2>Contact Me</h2>
                 <div class="contactIcons">
-                    <a href="mailto:Lynette.N.Barrera@gmail.com" target="_blank"><i class="fas fa-envelope"></i><br>Email me at Lynette.N.Barrera@gmail.com</a>
+                    <a href="mailto:Lynette.N.Barrera@gmail.com" target="_blank"><i class="fas fa-envelope"></i><br>Lynette.N.Barrera@gmail.com</a>
                     <hr><a href="https://www.linkedin.com/in/lynette-barrera/" target ="_blank"><i class="fab fa-linkedin"></i><br>Connect with me on LinkedIn</a>
-                    <hr><a href="https://github.com/LynetteNB" target="_blank"><i class="fab fa-github-square"></i><br>Check out my code on GitHub</a>
+                    <hr><a href="https://github.com/LynetteNB" target="_blank"><i class="fab fa-github-square"></i><br>View my code on GitHub</a>
                 </div>
             </div>
         </div>
@@ -303,6 +353,7 @@
 </div>
 
 <script src="js/jquery-2.2.4.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA12FJ0Fsb0QXncRWVWlF1M2UIPTn0VB8"></script>
 <script src="js/Detect-Elements-In-Viewport-jQuery-Visible/jquery.visible.min.js"></script>
 <script src="js/make-it-work.js"></script>
 </body>
