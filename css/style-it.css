@@ -226,7 +226,7 @@ p {
 .gray{
     background: #818183;
     color: white;
-    height: 57vw;
+    min-height: 57vw;
 }
 .projects img {
     width: 100%;
@@ -298,7 +298,7 @@ hr {
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 3vw;
     font-weight: bold;
 }
 
@@ -641,8 +641,13 @@ hr {
     width: 15vw;
     background: gold;
     border-radius: 50%;
-    box-shadow: 0 0  6vw 3vw darkorange;
+    box-shadow: 0 0  6vw 2.5vw darkorange;
     z-index: -1;
+    animation: sun 1s infinite ease alternate;
+}
+@keyframes sun {
+    0%{box-shadow: 0 0  6vw 2.5vw darkorange;}
+    100%{box-shadow: 0 0  6vw 4vw darkorange;}
 }
 .circ1{
     width: 15vw;
@@ -679,8 +684,7 @@ hr {
 }
 .cloud.mid{
     position: relative;
-    animation: float 65s linear infinite;
-    animation-delay: 15s;
+    animation: float 65s linear 15s infinite;
     z-index: -1;
     opacity: .9;
     top: 25vw;
@@ -688,8 +692,7 @@ hr {
 }
 .cloud.bottom{
     position: relative;
-    animation: float 65s linear infinite;
-    animation-delay: 35s;
+    animation: float 65s linear 35s infinite;
     z-index: -1;
     opacity: .9;
     top: 50vw;
