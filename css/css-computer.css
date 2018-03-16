@@ -16,11 +16,16 @@
 .screen{
     width: 93.33%;
     height: 14.443vw;
-    background: #C0FDFB;
     border-radius: 20px;
     position: absolute;
     top: 1.11vw;
     left: 3.33%;
+}
+.screenOn{
+    background: #C0FDFB;
+}
+.screenOff{
+    background: #314650;
 }
 .compEyes{
     position: absolute;
@@ -58,6 +63,10 @@
     position: absolute;
     bottom: .83vw;
     right: 42%;
+    cursor: pointer;
+}
+.power:active {
+    background: #314650;
 }
 .stand{
     background: lightgray;

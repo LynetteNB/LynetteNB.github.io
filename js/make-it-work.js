@@ -25,6 +25,11 @@ $(window).on("scroll", () => {
         $('.contactIcons').slideDown(1500);
     }
 });
+$(".power").click(() => {
+    $(".screenOn").toggleClass("screenOff");
+    $(".compEyes").fadeToggle(500);
+    $(".heading").fadeToggle(500);
+});
 
 //------------------------------------------------POMODORO CLOCK--------------------------------------------------------
 $("#timer").hide();
@@ -247,6 +252,11 @@ $(".close").click(() => {
     }, 240);
     clearInterval(timer);
 });
+window.onclick = function(event) {
+    if (event.target == $(".modal")) {
+        modal.style.display = "none";
+    }
+}
 
 
 //-------------------------------------------------WEATHER MAP----------------------------------------------------------

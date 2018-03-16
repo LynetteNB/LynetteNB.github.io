@@ -12,6 +12,9 @@ body {
     height: 100%;
     font-size: 1.25vw;
 }
+*:focus {
+    outline: none;
+}
 h1{
    font-size: 4vw;
 }
@@ -684,7 +687,7 @@ hr {
 }
 .cloud.mid{
     position: relative;
-    animation: float 65s linear 15s infinite;
+    animation: float 65s linear 35s infinite;
     z-index: -1;
     opacity: .9;
     top: 25vw;
@@ -692,7 +695,7 @@ hr {
 }
 .cloud.bottom{
     position: relative;
-    animation: float 65s linear 35s infinite;
+    animation: float 65s linear 15s infinite;
     z-index: -1;
     opacity: .9;
     top: 50vw;
