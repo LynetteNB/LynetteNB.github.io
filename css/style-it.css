@@ -660,8 +660,8 @@ hr {
     border-radius: 50%;
     background: white;
     position: absolute;
-    left: 13vw;
-    top: 5vw;
+    left: 16vw;
+    top: 4vw;
 }
 .circ2{
     width: 20vw;
@@ -671,36 +671,34 @@ hr {
     position: absolute;
 }
 .circ3{
-    width: 10vw;
-    height: 10vw;
-    border-radius: 50%;
+    width: 35vw;
+    height: 13vw;
+    border-radius: 40%;
     background: white;
     position: absolute;
-    left: 23vw;
-    top: 6vw;
+    left: 10vw;
+    top: 8vw;
 }
-.cloud.top{
+.cloud{
     position: relative;
-    animation: float 65s linear infinite;
     z-index: -1;
     opacity: .9;
+    display: flex;
+    justify-content: center;
+}
+.cloudTop {
     top: 7vw;
+    animation: float 65s linear infinite;
     animation-fill-mode: both;
 }
-.cloud.mid{
-    position: relative;
-    animation: float 65s linear 35s infinite;
-    z-index: -1;
-    opacity: .9;
+.cloudMid{
     top: 25vw;
+    animation: float 65s linear 30s infinite;
     animation-fill-mode: both;
 }
-.cloud.bottom{
-    position: relative;
-    animation: float 65s linear 15s infinite;
-    z-index: -1;
-    opacity: .9;
+.cloudBottom{
     top: 50vw;
+    animation: float 65s linear 15s infinite;
     animation-fill-mode: both;
 }
 @keyframes float{
