@@ -1,6 +1,7 @@
 /*Colors: light pink #FBD5DB, gray #818183 charcoal #5D737E teal #64B6AC light blue #C0FDFB*/
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 body {
     margin: 0;
