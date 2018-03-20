@@ -35,7 +35,7 @@ $(window).on("scroll", () => {
         $("#resumeNav").css("color", "white");
         $("#projectsNav").css("color", "#FBD5DB");
         $("#contactNav").css("color", "white");
-    } else if($('.computer').visible(true)) {
+    } else if($('.pink h2').visible(true)) {
         $("#aboutNav").css("color", "#FBD5DB");
         $("#resumeNav").css("color", "white");
         $("#projectsNav").css("color", "white");
