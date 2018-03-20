@@ -24,6 +24,33 @@ $(window).on("scroll", () => {
     if($('.contact h2').visible(true)) {
         $('.contactIcons').slideDown(1500);
     }
+
+    if($('.contact h2').visible(true)) {
+        $("#aboutNav").css("color", "white");
+        $("#resumeNav").css("color", "white");
+        $("#projectsNav").css("color", "white");
+        $("#contactNav").css("color", "#FBD5DB");
+    } else if($('.gray h2').visible(true)){
+        $("#aboutNav").css("color", "white");
+        $("#resumeNav").css("color", "white");
+        $("#projectsNav").css("color", "#FBD5DB");
+        $("#contactNav").css("color", "white");
+    } else if($('.computer').visible(true)) {
+        $("#aboutNav").css("color", "#FBD5DB");
+        $("#resumeNav").css("color", "white");
+        $("#projectsNav").css("color", "white");
+        $("#contactNav").css("color", "white");
+    }  else if($('.banner-inner h1').visible(true)) {
+        $("#aboutNav").css("color", "white");
+        $("#resumeNav").css("color", "white");
+        $("#projectsNav").css("color", "white");
+        $("#contactNav").css("color", "white");
+    } else {
+        $("#aboutNav").css("color", "white");
+        $("#resumeNav").css("color", "#FBD5DB");
+        $("#projectsNav").css("color", "white");
+        $("#contactNav").css("color", "white");
+    }
 });
 $(".power").click(() => {
     $(".screenOn").toggleClass("screenOff");
