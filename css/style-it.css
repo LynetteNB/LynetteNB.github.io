@@ -132,7 +132,7 @@ p {
     min-height: 100%;
 }
 .banner-inner{
-    padding: 20vw;
+    padding: 43vh 20vw;
 }
 .pink{
     background: #FBD5DB;
@@ -250,6 +250,7 @@ p {
 .contact {
     background: #64B6AC;
     color: white;
+    height: 43vw;
 }
 .contact img{
     border-radius: 50%;
