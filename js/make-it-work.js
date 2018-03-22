@@ -1,3 +1,4 @@
+(function () {
 $('.heading h1').hide();
 $('.name').hide();
 $('code').hide();
@@ -363,7 +364,7 @@ $("document").ready(function() {
         }
     }
     function update() {
-        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        $.get("https://crossorigin.me/http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "7c66dda135d5bd2e458cb66254bd830b",
             lat: geoLat,
             lon: geoLon,
@@ -469,3 +470,4 @@ $("document").ready(function() {
         });
     }
 });
+})();
