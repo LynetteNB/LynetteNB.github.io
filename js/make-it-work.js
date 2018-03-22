@@ -465,8 +465,8 @@ $("document").ready(function() {
             $(".headers").html(htmlheaders);
             $(".weather").html(html);
         }).fail(function () {
-            $(".city").html("No such place!");
-            $(".weather").html("<p>Please try a different location.</p>");
+            $(".city").html("Currently Unavailable");
+            $(".weather").html("<p>Please try again later!</p>");
         });
     }
 });
