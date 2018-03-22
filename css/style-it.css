@@ -122,18 +122,22 @@ p {
     color: white;
 }
 .nav a:hover{
-    color: #FBD5DB;
+    color: #64B6AC;
 }
 .nav a:active{
     color: #64B6AC;
 }
 .banner{
     width: 100%;
-    background: white;
     min-height: 100%;
+    background-image: url("../img/tenor.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .banner-inner{
-    padding: 43vh 20vw;
+    padding: 45.5vh 20vw;
+    background: rgba(255, 255, 255, .8);
 }
 .pink{
     background: #FBD5DB;
@@ -164,14 +168,21 @@ p {
 .paper h4 {
     margin: 1vw 0;
 }
-.paper dd, .paper dt, .paper li{
+.paper dd, .paper li{
     margin-top: .4vw;
+}
+.paper dt {
+    margin-top: 2vw;
 }
 .paper dd {
     margin-left: 2.5vw;
 }
-.paper ul {
+.paper p {
     padding-left: 1.5vw;
+}
+.paper a{
+    text-decoration: none;
+    color: white;
 }
 .leftColumn{
     background: #64B6AC;
@@ -195,12 +206,12 @@ p {
     margin-bottom: 2.5vw;
     font-size: 2.45vw;
 }
+.leftColumn ul {
+    font-family: Ubuntu, monospace;
+}
 .resumeContact span {
     color: white;
     text-decoration: none;
-}
-.toolsList{
-    display: flex;
 }
 .resumeTools p{
     margin: .75vw;
@@ -251,7 +262,7 @@ p {
 .contact {
     background: #64B6AC;
     color: white;
-    height: 43vw;
+    min-height: 43vw;
 }
 .contact img{
     border-radius: 50%;
@@ -822,4 +833,43 @@ hr {
     border-radius: 5px;
     margin-bottom: 3vw;
     box-sizing: border-box;
+}
+
+@media screen and (max-width: 1023px) {
+    body{
+        font-size: 2vw;
+    }
+    h1{
+        font-size: 6vw;
+    }
+    h2 {
+        font-size: 4vw;
+        margin: 2vw;
+    }
+    h3 {
+        font-size: 3.5vw;
+    }
+    h4 {
+        font-size: 3vw;
+    }
+    .nav {
+        display: none;
+    }
+    .computer {
+        display: none;
+    }
+    .column.three-fifths{
+        width: 100%;
+    }
+    .column.three-fourths.offset{
+        width: 100%;
+        margin: 0;
+    }
+    .about p{
+        line-height: 3vw;
+        height: 50.5vw;
+    }
+    .paper {
+        height: 127.2vw;
+    }
 }
