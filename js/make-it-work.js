@@ -295,7 +295,7 @@ $("document").ready(function() {
     var markers = [];
     var geoLat = 40.7128;
     var geoLon = -74.0060;
-    $.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?').done( function(data) {
+    $.getJSON('https://crossorigin.me/http://www.geoplugin.net/json.gp?jsoncallback=?').done( function(data) {
         geoLat = Number(data.geoplugin_latitude);
         geoLon = Number(data.geoplugin_longitude);
         map.setCenter({lat: geoLat, lng: geoLon});
