@@ -293,17 +293,17 @@ $("#weatherImg").click(() => {
 });
 $("document").ready(function() {
     var markers = [];
-    var geoLat = 40.7128;
-    var geoLon = -74.0060;
-    $.getJSON('https://cors-anywhere.herokuapp.com/http://www.geoplugin.net/json.gp?jsoncallback=?').done( function(data) {
-        geoLat = Number(data.geoplugin_latitude);
-        geoLon = Number(data.geoplugin_longitude);
-        map.setCenter({lat: geoLat, lng: geoLon});
+    var geoLat = 29.4241;
+    var geoLon = -98.4936;
+    // $.getJSON('https://cors-anywhere.herokuapp.com/http://www.geoplugin.net/json.gp?jsoncallback=?').done( function(data) {
+    //     geoLat = Number(data.geoplugin_latitude);
+    //     geoLon = Number(data.geoplugin_longitude);
+    //     map.setCenter({lat: geoLat, lng: geoLon});
         clickMarker({lat: geoLat, lng: geoLon}, map);
-    }).fail(function(){
-        geoLat = 40.7128;
-        geoLon = -74.0060;
-    });
+    // }).fail(function(){
+    //     geoLat = 40.7128;
+    //     geoLon = -74.0060;
+    // });
     var infoWindow = new google.maps.InfoWindow({content: ""});
     var map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: geoLat, lng: geoLon},
