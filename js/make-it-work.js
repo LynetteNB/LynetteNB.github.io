@@ -295,7 +295,7 @@ $("document").ready(function() {
     var markers = [];
     var geoLat = 40.7128;
     var geoLon = -74.0060;
-    $.getJSON('https://crossorigin.me/http://www.geoplugin.net/json.gp?jsoncallback=?').done( function(data) {
+    $.getJSON('https://cors-anywhere.herokuapp.com/http://www.geoplugin.net/json.gp?jsoncallback=?').done( function(data) {
         geoLat = Number(data.geoplugin_latitude);
         geoLon = Number(data.geoplugin_longitude);
         map.setCenter({lat: geoLat, lng: geoLon});
@@ -364,7 +364,7 @@ $("document").ready(function() {
         }
     }
     function update() {
-        $.get("https://crossorigin.me/http://api.openweathermap.org/data/2.5/forecast", {
+        $.get("https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "7c66dda135d5bd2e458cb66254bd830b",
             lat: geoLat,
             lon: geoLon,
