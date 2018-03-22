@@ -734,6 +734,7 @@ hr {
     font-family: Ubuntu, monospace;
     padding: .25vw;
     font-size: 1vw;
+    background: transparent;
 }
 .checkboxes{
     width: 55%;

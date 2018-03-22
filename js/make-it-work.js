@@ -295,15 +295,14 @@ $("document").ready(function() {
     var markers = [];
     var geoLat = 29.4241;
     var geoLon = -98.4936;
-    // $.getJSON('https://cors-anywhere.herokuapp.com/http://www.geoplugin.net/json.gp?jsoncallback=?').done( function(data) {
-    //     geoLat = Number(data.geoplugin_latitude);
-    //     geoLon = Number(data.geoplugin_longitude);
-    //     map.setCenter({lat: geoLat, lng: geoLon});
+    $.get('https://ipapi.co/json/').done( function(data) {
+        geoLat = data.latitude;
+        geoLon = data.longitude;
+        map.setCenter({lat: geoLat, lng: geoLon});
         clickMarker({lat: geoLat, lng: geoLon}, map);
-    // }).fail(function(){
-    //     geoLat = 40.7128;
-    //     geoLon = -74.0060;
-    // });
+    }).fail(function(){
+        clickMarker({lat: geoLat, lng: geoLon}, map);
+    });
     var infoWindow = new google.maps.InfoWindow({content: ""});
     var map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: geoLat, lng: geoLon},
