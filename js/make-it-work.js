@@ -26,12 +26,12 @@ $(window).on("scroll", () => {
         $('.contactIcons').slideDown(1500);
     }
 
-    if($('.contact h2').visible(true)) {
+    if($('.contact a').visible(true)) {
         $("#aboutNav").css("background", "#5D737E");
         $("#resumeNav").css("background", "#5D737E");
         $("#projectsNav").css("background", "#5D737E");
         $("#contactNav").css("background", "#FBD5DB");
-    } else if($('.gray h2').visible(true)){
+    } else if($('.gray h3').visible(true)){
         $("#aboutNav").css("background", "#5D737E");
         $("#resumeNav").css("background", "#5D737E");
         $("#projectsNav").css("background", "#FBD5DB");
