@@ -121,7 +121,7 @@ p {
     color: white;
 }
 .nav a:hover{
-    color: #64B6AC;
+    text-decoration: underline;
 }
 .nav a:active{
     color: #64B6AC;
@@ -129,7 +129,7 @@ p {
 .banner{
     width: 100%;
     min-height: 100%;
-    background-image: url("../img/tenor.gif");
+    background-image: url("../img/laptop.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
