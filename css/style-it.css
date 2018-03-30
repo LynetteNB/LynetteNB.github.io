@@ -154,6 +154,9 @@ p {
     height: 33.5vw;
     line-height: 2vw;
 }
+.medium {
+    display: none;
+}
 .focus{
     color: white;
 }
@@ -892,6 +895,7 @@ hr {
         border-radius: 0 0 10px 10px;
         font-size: 2.25vw;
         font-weight: normal;
+        opacity: .85;
     }
     .menu li {
         padding: .75vw 1.5vw;
@@ -899,12 +903,6 @@ hr {
     .leftColumn .fa-ul {
         margin-left: 1.5em;
     }
-    .column.three-fifths .about{
-        width: 100%;
-    }
-    /*.column.two-fifths {*/
-        /*width: 50%;*/
-    /*}*/
     .column.one-third {
         width: 50%;
         height: 53vw;
@@ -924,7 +922,16 @@ hr {
     }
     .about p{
         line-height: 3vw;
-        height: 50.5vw;
+        height: 56.5vw;
+    }
+    .medium {
+        display: block;
+    }
+    .large {
+        display: none;
+    }
+    .computer {
+        margin-top: 62%;
     }
     .paper {
         height: 129.2vw;
@@ -935,5 +942,572 @@ hr {
     }
     .contact a {
         font-size: 2.25vw;
+    }
+    .contact i {
+        font-size: 3.25vw;
+    }
+    #simonContent, #pomodoroContent {
+        margin: 15% auto;
+    }
+    #weatherContent {
+        margin: 10% auto;
+        height: 75vw;
+    }
+    .close {
+        font-size: 5vw;
+    }
+}
+@media screen and (max-width: 425px) {
+    body{
+        font-size: 3.5vw;
+    }
+    h1{
+        font-size: 10vw;
+    }
+    h2 {
+        font-size: 8vw;
+        margin: 2vw;
+    }
+    h3 {
+        font-size: 4.5vw;
+    }
+    h4 {
+        font-size: 4vw;
+    }
+    .nav {
+        height: 9vw;
+        font-size: 4.5vw;
+    }
+    .nav .name {
+        left: 33.75vw;
+    }
+    .menu {
+        width: 6vw;
+        height: 5.5vw;
+        border-radius: 8px;
+        font-size: 3.25vw;
+        padding-top: .55vw;
+    }
+    .menu ul {
+        right: 1.25vw;
+         top: 9vw;
+         border-radius: 0 0 6px 6px;
+         font-size: 4.25vw;
+     }
+    .menu li {
+        padding: 1.75vw 3.5vw;
+    }
+    .banner-inner{
+        padding: 43.5vh 5vw;
+    }
+    .about p{
+        line-height: 6vw;
+        height: 106.5vw;
+    }
+    .column.three-fifths {
+        width: 100%;
+    }
+    .column.two-fifths {
+        display: none;
+    }
+    .column.three-eighths {
+        width: 100%;
+    }
+    .paper {
+        height: 140vw;
+    }
+    .rightColumn {
+        display: none;
+    }
+    .leftColumn {
+        border-radius: 10px;
+    }
+    .leftColumn h3 {
+        font-size: 6.45vw;
+    }
+    .resumeTools {
+        display: none;
+    }
+    .downloadResume {
+        border-radius: 5px;
+        padding: 1.75vw;
+    }
+    .column.one-third {
+        width: 100%;
+        height: auto;
+    }
+    .tag {
+        border-radius: 7px;
+        border: 2px solid #64B6AC;
+        padding: 1vw;
+    }
+    .projects p {
+        line-height: 8vw;
+    }
+    .contact a {
+        font-size: 4.25vw;
+    }
+    .contact i {
+        font-size: 5.5vw;
+    }
+    /*----------------------------------POMODORO MODAL-------------------------------*/
+
+    #pomodoroContent {
+        width: 90%;
+        height: 120vw;
+        font-size: 4.6vw;
+    }
+    #pomodoroContent h1 {
+        font-size: 6vw;
+    }
+    .tomato{
+        width: 60vw;
+        height: 60vw;
+        margin: 4vw auto;
+        box-shadow: inset 3vw -1vw 0 #92090a;
+    }
+    .leafUp{
+        top: -5.5vw;
+        left: 9.8vw;
+        border-bottom: 20vw solid #1c9d34;
+        border-top:0 solid transparent;
+        border-left:20vw solid transparent;
+        border-right: 20vw solid transparent;
+    }
+    .leafDown{
+        top: -21.5vw;
+        left: 8.8vw;
+        border-top: 22vw solid #1c9d34;
+        border-bottom:0 solid transparent;
+        border-left: 22vw solid transparent;
+        border-right: 22vw solid transparent;
+    }
+    .eye{
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+    .eye:after{
+        width: 1.6vw;
+        height: 1.6vw;
+        top: 1.2vw;
+        left: 1vw;
+    }
+    .eye.leftEye{
+        left: 15.5vw;
+        top: -17vw;
+    }
+    .eye.rightEye{
+        right: -38.5vw;
+        top: -22.5vw;
+    }
+    .smile{
+        width: 4.3vw;
+        height: 3.6vw;
+        border-radius: 100%/0 0 9vw 9vw;
+        border: .5vw solid;
+        top: -23.5vw;
+        left: 27.8vw;
+    }
+    .smileAnimation{
+        width: 4.3vw;
+        height: 3.6vw;
+        border-radius: 100%/0 0 9vw 9vw;
+        border: .5vw solid;
+        top: -23.5vw;
+        left: 27.8vw;
+    }
+    .bigSmile{
+        width: 5.5vw;
+        height: 3vw;
+        border-radius: 100%/0 0 5vw 5vw;
+        top: -4.5vw;
+        left: 12.5vw;
+
+    }
+    @keyframes bigSmile {
+        0% {
+            transform: scale(1, 1);
+            top: -23.5vw;
+        }
+        100% {
+            transform: scale(3, 3);
+            top: -4.5vw;
+        }
+    }
+    @keyframes smallSmile {
+        0% {
+            transform: scale(3, 3);
+            top: -4.5vw;
+        }
+        100% {
+            transform: scale(1, 1);
+            top: -23.5vw;
+        }
+    }
+    #timer{
+        padding: .2vw;
+        font-size: 1.5vw;
+    }
+    .pomodoroButtons {
+        display: block;
+        margin: .3vw auto;
+    }
+    #pomodoroContent input {
+        width: 1.75vw;
+        font-family: Ubuntu, monospace;
+        font-size: 1.3vw;
+    }
+    #pomodoroContent button {
+        color: white;
+        background: #d0433a;
+        border-radius: 10px;
+        padding: .5vw;
+        margin: .5vw;
+        font-family: Ubuntu, monospace;
+        width: 6vw;
+        font-size: 1.7vw;
+        cursor: pointer;
+    }
+    #pomodoroContent button:hover {
+        color: black;
+    }
+    #pomodoroContent button:active {
+        background: black;
+        color: white;
+    }
+    #pomodoroContent button:disabled,
+    #pomodoroContent button[disabled]{
+        background: #92090a;
+        cursor: default;
+        color: #b7b7b7;
+    }
+    #statusIcon{
+        z-index: 1;
+        color: white;
+        position: absolute;
+        font-size: 1.1vw;
+        top: 1.65vw;
+        left: 2.1vw;
+    }
+    #warning {
+        background: #f3dede;
+        color: #a94442;
+        border-radius: 10px;
+        padding: .75vw;
+        margin: .25vw 0;
+    }
+    #pomodoroContent p{
+        font-size: 3vw;
+        margin: 3.25vw;
+    }
+    /*------------------------------------SIMON MODAL--------------------------------*/
+
+    #simonContent {
+        width: 50%;
+        margin: 3% auto;
+        height: 45vw;
+    }
+    #simonContent h1 {
+        font-family: 'VT323', monospace;
+        text-align: center;
+        font-size: 4vw;
+        margin: 1.5vw 0;
+    }
+    #simonContent button {
+        height: 3vw;
+        font-size: 2vw;
+        border-radius: 5px;
+        margin: 1vw;
+        font-family: 'VT323', monospace;
+        color: #5D737E;
+        background: white;
+    }
+    #simonContent button:hover {
+        background: #5D737E;
+        color: white;
+        cursor: pointer;
+    }
+    .block {
+        width: 16.64816870144284vw;
+        height: 16.64816870144284vw;
+        margin: 1.1098779134295227vw;
+        overflow: hidden;
+    }
+    #startSimon{
+        position: absolute;
+        left: -2.2vw;
+        top: auto;
+    }
+    .top, .bottom {
+        display: flex;
+        justify-content: center;
+    }
+    .topRight {
+        border-top-right-radius: 100%;
+    }
+    .topLeft{
+        border-top-left-radius: 100%;
+    }
+    .bottomLeft{
+        border-bottom-left-radius: 100%;
+    }
+    .bottomRight{
+        border-bottom-right-radius: 100%;
+    }
+    .circle {
+        position: absolute;
+        width: 16vw;
+        height: 16vw;
+        border-radius: 50%;
+        background: white;
+        top: 11vw;
+        left: 17vw;
+    }
+    .red {
+        background: red;
+    }
+    .blue {
+        background: blue;
+    }
+    .yellow {
+        background: yellow;
+    }
+    .green {
+        background: green;
+    }
+    .muteRed {
+        background: #D97273;
+    }
+    .muteBlue {
+        background: #9acfea;
+    }
+    .muteYellow {
+        background: khaki;
+    }
+    .muteGreen {
+        background: #6CA559;
+    }
+    #game{
+        position: relative;
+    }
+    .overAnimation {
+        background: url("../img/simon-game-over.png");
+        background-size: 211vw 38.5vw;
+        position: absolute;
+        width: 42.2vw;
+        height: 40vw;
+        top: -.5vw;
+        left: 3.6vw;
+        animation:over 1s steps(5, end);
+        animation-fill-mode: forwards;
+    }
+    @keyframes over {
+        0%{background-position: 0 -.5vw;}
+        100%{background-position: -211vw;}
+    }
+    #html {
+        font-size: 6vw;
+        font-family: 'VT323', monospace;
+        position: absolute;
+        top: 16vw;
+        left: 23.7vw;
+        /*text-align: center;*/
+    }
+
+    /*----------------------------------WEATHER MODAL------------------------------------------*/
+    #weatherContent {
+        width: 80%;
+        margin: 3% auto;
+        height: 47vw;
+        overflow: auto;
+        padding: 1vw;
+        background: #C0FDFB;
+        opacity: .99;
+    }
+    .sun{
+        position: absolute;
+        right: 15vw;
+        top: 8vw;
+        height: 15vw;
+        width: 15vw;
+        background: gold;
+        border-radius: 50%;
+        box-shadow: 0 0  6vw 2.5vw darkorange;
+        z-index: -1;
+        animation: sun 1s infinite ease alternate;
+    }
+    @keyframes sun {
+        0%{box-shadow: 0 0  6vw 2.5vw darkorange;}
+        100%{box-shadow: 0 0  6vw 4vw darkorange;}
+    }
+    .circ1{
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+        background: white;
+        position: absolute;
+        left: 16vw;
+        top: 4vw;
+    }
+    .circ2{
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        background: white;
+        position: absolute;
+    }
+    .circ3{
+        width: 35vw;
+        height: 13vw;
+        border-radius: 40%;
+        background: white;
+        position: absolute;
+        left: 10vw;
+        top: 8vw;
+    }
+    .cloud{
+        position: relative;
+        z-index: -1;
+        opacity: .9;
+        display: flex;
+        justify-content: center;
+    }
+    .cloudTop {
+        top: 7vw;
+        animation: float 65s linear infinite;
+        animation-fill-mode: both;
+    }
+    .cloudMid{
+        top: 25vw;
+        animation: float 65s linear 30s infinite;
+        animation-fill-mode: both;
+    }
+    .cloudBottom{
+        top: 50vw;
+        animation: float 65s linear 15s infinite;
+        animation-fill-mode: both;
+    }
+    @keyframes float{
+        0%{left: -55vw;}
+        100%{left: 100%}
+    }
+    #weatherContent main {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 2;
+    }
+    .instruct {
+        margin: 1.25vw;
+        font-weight: bolder;
+    }
+    #address{
+        border-bottom: 2px solid #5D737E;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-family: Ubuntu, monospace;
+        padding: .25vw;
+        font-size: 1vw;
+        background: transparent;
+    }
+    .checkboxes{
+        width: 55%;
+        display: inline-block;
+        text-align: center;
+    }
+    .dayOptions {
+        width: 15%;
+        text-align: right;
+        display: inline-block;
+    }
+    .dayOptions select {
+        background: #818183;
+        border-radius: 5px;
+        color: white;
+        font-family: Ubuntu, monospace;
+        cursor: pointer;
+        font-size: 1vw;
+    }
+    .weatherOptions{
+        width: 90%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        font-family: Ubuntu, monospace;
+    }
+    .searchOptions{
+        width: 25%;
+        display: inline-block;
+        text-align: left;
+    }
+    .searchOptions button{
+        width: 6vw;
+        background: #818183;
+        border-radius: 5px;
+        color: white;
+        font-family: Ubuntu, monospace;
+        cursor: pointer;
+        padding: .25vw;
+        font-size: 1vw;
+
+    }
+    .searchOptions button:hover{
+        background: #C0FDFB;
+        color: #5D737E;
+    }
+    .city {
+        display: block;
+        margin: 1.25vw 0;
+        font-family: Ubuntu, monospace;
+    }
+    .headers {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+    .header {
+        background: #818183;
+        height: auto;
+        text-align: center;
+        border: 1px solid #818183;
+        color: white;
+        font-family: Ubuntu, monospace;
+        font-size: 1.5vw;
+        padding: .5vw;
+        margin: 0.6944444444444444vw .3vw;
+        border-radius: 10px;
+        flex: 1;
+    }
+    .headerSmall {
+        display: none;
+    }
+    .weather {
+        display: flex;
+        height: auto;
+        clear: right;
+    }
+    .day {
+        background: white;
+        text-align: center;
+        border: 1px solid #5D737E;
+        border-radius: 10px;
+        margin: 0 .3vw;
+        flex: 1;
+    }
+    #weatherContent h4 {
+        margin: .75vw 0;
+        font-family: Ubuntu, monospace;
+    }
+    .gifSize {
+        height: 5.208333333333333vw;
+    }
+    #map{
+        width: 100%;
+        height: 27.77777777777778vw;
+        border: 3px solid #818183;
+        border-radius: 5px;
+        margin-bottom: 3vw;
+        box-sizing: border-box;
     }
 }
