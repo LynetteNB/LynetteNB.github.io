@@ -857,23 +857,24 @@ hr {
         font-size: 3vw;
     }
     .nav {
-        height: 6vw;
-        font-size: 2.5vw;
+        height: 9vw;
+        font-size: 4.5vw;
     }
     .nav .name {
-        left: 42.75vw;
+        left: 31.75vw;
+        top: 1vw;
     }
     .nav-links.left, .nav-links.right {
         display: none;
     }
     .menu {
         display: inline-block;
-        width: 2.5vw;
-        height: 2.25vw;
-        border-radius: 5px;
+        width: 6.5vw;
+        height: 5.25vw;
+        border-radius: 9px;
         border: 1px solid white;
         float: right;
-        font-size: 1.25vw;
+        font-size: 3.25vw;
         font-weight: bolder;
         padding-top: .25vw;
     }
@@ -885,19 +886,19 @@ hr {
     }
     .menu ul {
         position: absolute;
-        right: .75vw;
-        top: 5vw;
+        right: 1.5vw;
+        top: 9vw;
         background: #5D737E;
         margin: 0;
         list-style-type: none;
         padding: 0;
         border-radius: 0 0 10px 10px;
-        font-size: 2.25vw;
+        font-size: 5.25vw;
         font-weight: normal;
         opacity: .85;
     }
     .menu li {
-        padding: .75vw 1.5vw;
+        padding: 2.75vw 3.5vw;
     }
     .leftColumn .fa-ul {
         margin-left: 1.5em;
@@ -975,35 +976,35 @@ hr {
     }
     .nav {
         height: 15vw;
-        font-size: 4.5vw;
+        font-size: 6.5vw;
     }
     .nav .name {
-        left: 32.75vw;
+        left: 21.75vw;
         top: 3vw;
     }
     .menu {
-        width: 12vw;
-        height: 11.5vw;
+        width: 11vw;
+        height: 10.5vw;
         border-radius: 17px;
         font-size: 6.25vw;
-        padding-top: 1.5vw;
+        padding-top: .5vw;
         margin-right: 4vw;
     }
     .menu ul {
         right: 1.25vw;
          top: 15vw;
          border-radius: 0 0 6px 6px;
-         font-size: 4.25vw;
+         font-size: 7.25vw;
      }
     .menu li {
-        padding: 1.75vw 3.5vw;
+        padding: 3.75vw 4.5vw;
     }
     .banner-inner{
         padding: 43.5vh 5vw;
     }
     .about p{
         line-height: 6vw;
-        height: 106.5vw;
+        height: 110.5vw;
     }
     .column.three-fifths {
         width: 100%;
@@ -1223,197 +1224,103 @@ hr {
     /*----------------------------------WEATHER MODAL------------------------------------------*/
     #weatherContent {
         width: 80%;
-        margin: 3% auto;
-        height: 47vw;
-        overflow: auto;
-        padding: 1vw;
-        background: #C0FDFB;
-        opacity: .99;
+        margin: 15% auto;
+        height: 150vw;
     }
     .sun{
-        position: absolute;
-        right: 15vw;
-        top: 8vw;
-        height: 15vw;
-        width: 15vw;
-        background: gold;
-        border-radius: 50%;
-        box-shadow: 0 0  6vw 2.5vw darkorange;
-        z-index: -1;
-        animation: sun 1s infinite ease alternate;
-    }
-    @keyframes sun {
-        0%{box-shadow: 0 0  6vw 2.5vw darkorange;}
-        100%{box-shadow: 0 0  6vw 4vw darkorange;}
+        right: 8vw;
+        top: 21vw;
+        height: 35vw;
+        width: 35vw;
     }
     .circ1{
-        width: 15vw;
-        height: 15vw;
-        border-radius: 50%;
-        background: white;
-        position: absolute;
-        left: 16vw;
-        top: 4vw;
+        width: 37vw;
+        height: 37vw;
+        left: -9vw;
+        top: 6vw;
     }
     .circ2{
-        width: 20vw;
-        height: 20vw;
-        border-radius: 50%;
-        background: white;
-        position: absolute;
+        width: 44vw;
+        height: 44vw;
     }
     .circ3{
-        width: 35vw;
-        height: 13vw;
-        border-radius: 40%;
-        background: white;
-        position: absolute;
-        left: 10vw;
-        top: 8vw;
-    }
-    .cloud{
-        position: relative;
-        z-index: -1;
-        opacity: .9;
-        display: flex;
-        justify-content: center;
+        width: 64vw;
+        height: 20vw;
+        left: -24vw;
+        top: 24vw;
     }
     .cloudTop {
-        top: 7vw;
-        animation: float 65s linear infinite;
-        animation-fill-mode: both;
+        top: 23vw;
     }
     .cloudMid{
-        top: 25vw;
-        animation: float 65s linear 30s infinite;
-        animation-fill-mode: both;
+        top: 65vw;
     }
     .cloudBottom{
-        top: 50vw;
-        animation: float 65s linear 15s infinite;
-        animation-fill-mode: both;
+        top: 131vw;
     }
     @keyframes float{
-        0%{left: -55vw;}
+        0%{left: -68vw;}
         100%{left: 100%}
     }
-    #weatherContent main {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        z-index: 2;
+    .day p {
+        line-height: 5vw;
+        margin: auto;
     }
-    .instruct {
-        margin: 1.25vw;
-        font-weight: bolder;
+    #address {
+        font-size: 4vw;
     }
-    #address{
-        border-bottom: 2px solid #5D737E;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        font-family: Ubuntu, monospace;
-        padding: .25vw;
-        font-size: 1vw;
-        background: transparent;
-    }
-    .checkboxes{
-        width: 55%;
-        display: inline-block;
-        text-align: center;
-    }
-    .dayOptions {
-        width: 15%;
-        text-align: right;
-        display: inline-block;
-    }
-    .dayOptions select {
-        background: #818183;
-        border-radius: 5px;
-        color: white;
-        font-family: Ubuntu, monospace;
-        cursor: pointer;
-        font-size: 1vw;
-    }
-    .weatherOptions{
-        width: 90%;
-        box-sizing: border-box;
-        margin: 0 auto;
-        font-family: Ubuntu, monospace;
-    }
-    .searchOptions{
-        width: 25%;
-        display: inline-block;
-        text-align: left;
-    }
-    .searchOptions button{
-        width: 6vw;
-        background: #818183;
-        border-radius: 5px;
-        color: white;
-        font-family: Ubuntu, monospace;
-        cursor: pointer;
-        padding: .25vw;
-        font-size: 1vw;
-
-    }
-    .searchOptions button:hover{
-        background: #C0FDFB;
-        color: #5D737E;
-    }
-    .city {
+    .dayOptions, .searchOptions {
         display: block;
-        margin: 1.25vw 0;
-        font-family: Ubuntu, monospace;
-    }
-    .headers {
         text-align: center;
         width: 100%;
-        height: auto;
-        display: flex;
     }
-    .header {
-        background: #818183;
-        height: auto;
+    .searchOptions button {
+        width: 17vw;
+        font-size: 4vw;
+        padding: 1.25vw;
+    }
+    #weatherContent select {
+        height: 6.8vw;
+        font-size: 3.4vw;
+        float: none;
+        margin: 2vw;
+    }
+    .top {
+        padding: 2vw;
+    }
+    .inner {
+        width: 98%;
         text-align: center;
-        border: 1px solid #818183;
-        color: white;
-        font-family: Ubuntu, monospace;
-        font-size: 1.5vw;
-        padding: .5vw;
-        margin: 0.6944444444444444vw .3vw;
-        border-radius: 10px;
-        flex: 1;
-    }
-    .headerSmall {
-        display: none;
-    }
-    .weather {
-        display: flex;
-        height: auto;
-        clear: right;
-    }
-    .day {
-        background: white;
-        text-align: center;
-        border: 1px solid #5D737E;
-        border-radius: 10px;
-        margin: 0 .3vw;
-        flex: 1;
-    }
-    #weatherContent h4 {
-        margin: .75vw 0;
-        font-family: Ubuntu, monospace;
     }
     .gifSize {
-        height: 5.208333333333333vw;
+        height: 20vw;
+    }
+    .day {
+        flex: 0;
+        margin: 2vw 0;
+    }
+    .instruct {
+        margin: 3.5vw;
+    }
+    .checkboxes{
+        text-align: center;
+        font-size: 3.5vw;
+    }
+    .checkboxes label {
+        display: block;
+    }
+    .headers {
+        display: none;
+    }
+    .headerSmall {
+        display: block;
+        font-size: 4vw;
+        height: auto;
+    }
+    .weather {
+        display: block;
     }
     #map{
-        width: 100%;
-        height: 27.77777777777778vw;
-        border: 3px solid #818183;
-        border-radius: 5px;
-        margin-bottom: 3vw;
-        box-sizing: border-box;
+        height: 60vw;
     }
 }
