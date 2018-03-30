@@ -907,11 +907,18 @@ hr {
         width: 50%;
         height: 53vw;
     }
+    .screen, .outerScreen, .keyboard {
+        border-radius: 12px;
+    }
+    .key, .space {
+        border-radius: 5px;
+    }
     .projects p {
         line-height: 5vw;
     }
     .tag {
         float: none;
+        border-radius: 8px;
     }
     .one-third p:nth-of-type(1) {
         display: none;
@@ -949,9 +956,13 @@ hr {
     #simonContent, #pomodoroContent {
         margin: 15% auto;
     }
+    #pomodoroContent {
+        height: 54vw;
+    }
     #weatherContent {
         margin: 10% auto;
         height: 75vw;
+        width: 90%;
     }
     .close {
         font-size: 5vw;
