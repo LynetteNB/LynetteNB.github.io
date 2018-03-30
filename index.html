@@ -250,7 +250,7 @@
                     <div class="block muteYellow bottomLeft" id="yellow"></div>
                     <div class="block muteGreen bottomRight" id="green"></div>
                 </div>
-                <div id="overAnimation"></div>
+                <div id="overAnimation" class="overAnimation"></div>
             </div>
             <audio src="sound/beep-02.mp3" id="redSound" preload="auto"></audio>
             <audio src="sound/beep-07.mp3" id="blueSound" preload="auto"></audio>
@@ -288,8 +288,8 @@
                 <input type="text" value="5" id="shortBreakDuration" name="workIntervals"> mins<br>
                 <label for="longBreakDuration"><i class="fas fa-coffee"></i>+ Long Break: </label>
                 <input type="text" value="30" id="longBreakDuration" name="workIntervals"> mins
-                <p>Note: Timer will continue to run until stopped, even after modal is closed.</p>
             </form>
+            <p>Note: Timer will continue to run until stopped, even after modal is closed.</p>
             <audio src="sound/Warning-alarm/Warning-alarm.mp3" id="shortBreak" preload="auto"></audio>
             <audio src="sound/Alarm-tone/Alarm-tone.mp3" id="longBreak" preload="auto"></audio>
         </div>

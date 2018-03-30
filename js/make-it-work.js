@@ -74,9 +74,9 @@ $("#pomodoroImg").click(() => {
 });
 $("#startClock").click((e)=>{
     e.preventDefault();
-    $("#updateClock").removeAttr("disabled");
-    $("#startClock").attr("disabled", "disabled");
     if(timerCheck("workIntervals") && timerCheck("shortBreakDuration") && timerCheck("longBreakDuration")) {
+        $("#updateClock").removeAttr("disabled");
+        $("#startClock").attr("disabled", "disabled");
         $("#warning").slideUp();
         $("#smile").removeClass("smile").addClass("bigSmile");
         let minutes = $("#workIntervals").val();
@@ -158,6 +158,17 @@ $("#simonImg").click(() => {
     let green = $("#green");
     let yellow = $("#yellow");
     $("#overAnimation").hide();
+    if($(window).width() > 425){
+        $("#html").css({
+            top: "16vw",
+            left: "23.7vw"
+        });
+    } else {
+        $("#html").css({
+            top: "34.7vw",
+            left: "33.5vw"
+        });
+    }
 
     let getRandomColor = () => colorsArray[Math.floor((Math.random()*4))];
     let upClickety = (color) => {
@@ -188,9 +199,17 @@ $("#simonImg").click(() => {
         simonArray.push(randomColor);
         $("#html").text(counter);
         if (counter >= 10) {
-            $("#html").css("left", "22.5vw");
+            if($(window).width() > 425){
+                $("#html").css("left", "22.5vw");
+            } else {
+                $("#html").css("left", "32.9vw");
+            }
         } else {
-            $("#html").css("left", "23.7vw");
+            if($(window).width() > 425){
+                $("#html").css("left", "23.7vw");
+            } else {
+                $("#html").css("left", "36.9vw");
+            }
         }
         counter++;
         if (counter <= 5) {
@@ -239,13 +258,21 @@ $("#simonImg").click(() => {
     let checkSimon = () => {
         let randomColor = "";
         $("#startSimon").hide();
-        if (simonArray.length === 0){
+        if (simonArray.length === 0) {
             startGame();
-            $("#html").css("top", "16vw");
+            if ($(window).width() > 425) {
+                $("#html").css("top", "16vw");
+            } else {
+                $("#html").css("top", "30.7vw");
+            }
         }
         for(let i = 0; i < simonCheck.length; i++) {
             if(simonCheck[i] !== simonArray[i]){
-                $("#html").hide().css("left", "13.2vw").css("top", "10vw").fadeIn(3000).html("Game Over!<br><button>Play Again?</button>");
+                if($(window).width() > 425){
+                    $("#html").hide().css("left", "13.2vw").css("top", "10vw").fadeIn(3000).html("Game Over!<br><button>Play Again?</button>");
+                } else {
+                    $("#html").hide().css("left", "6.2vw").css("top", "20vw").fadeIn(3000).html("Game Over!<br><button>Play Again?</button>");
+                }
                 $("button").click(() => {
                     simonCheck = [];
                     simonArray = [];
@@ -274,10 +301,18 @@ $(".close").click(() => {
         $(".modal").css("display", "none");
         $("#html").html("<button id=\"startSimon\">Start</button>");
         $(".top, .bottom").show();
-        $("#html").css({
-            top: "16vw",
-            left: "23.7vw"
-        });
+        if($(window).width() > 425){
+            $("#html").css({
+                top: "16vw",
+                left: "23.7vw"
+            });
+        } else {
+            $("#html").css({
+                top: "34.7vw",
+                left: "33.5vw"
+            });
+        }
+
         if($("#updateClock").attr("disabled")){
             $("#smile").removeClass().addClass("smile");
         }
