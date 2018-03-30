@@ -964,6 +964,9 @@ hr {
         height: 75vw;
         width: 90%;
     }
+    .circ1 {
+        left: 21vw;
+    }
     .close {
         font-size: 5vw;
     }
@@ -1264,14 +1267,18 @@ hr {
         top: 23vw;
     }
     .cloudMid{
-        top: 65vw;
+        top: 77vw;
     }
     .cloudBottom{
-        top: 131vw;
+        top: 141vw;
     }
     @keyframes float{
         0%{left: -68vw;}
-        100%{left: 100%}
+        100%{left: 100vw}
+    }
+    @keyframes sun {
+        0%{box-shadow: 0 0  6vw 2.5vw darkorange;}
+        100%{box-shadow: 0 0  6vw 6vw darkorange;}
     }
     .day p {
         line-height: 5vw;
