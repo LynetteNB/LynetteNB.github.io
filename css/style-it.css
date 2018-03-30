@@ -106,6 +106,7 @@ p {
     left: 43.75vw;
     text-decoration: none;
     color: white;
+    top: 0;
 }
 .nav-links.right {
     float: right;
@@ -115,7 +116,7 @@ p {
     float: left;
     display: inline;
 }
-.nav-links a{
+.nav a{
     padding: 1.5vw;
     text-decoration: none;
     color: white;
@@ -125,6 +126,9 @@ p {
 }
 .nav a:active{
     color: #64B6AC;
+}
+.menu {
+    display: none;
 }
 .banner{
     width: 100%;
@@ -273,12 +277,10 @@ p {
     font-size: 1.75vw;
     color: white;
     text-decoration: none;
+    margin: 5%;
 }
 .contact i{
     font-size: 2.5vw;
-}
-.contact a{
-    margin: 5% 5%;
 }
 .contact a:hover{
     color: #C0FDFB;
@@ -853,13 +855,68 @@ hr {
         font-size: 3vw;
     }
     .nav {
+        height: 6vw;
+        font-size: 2.5vw;
+    }
+    .nav .name {
+        left: 42.75vw;
+    }
+    .nav-links.left, .nav-links.right {
         display: none;
     }
-    .computer {
-        display: none;
+    .menu {
+        display: inline-block;
+        width: 2.5vw;
+        height: 2.25vw;
+        border-radius: 5px;
+        border: 1px solid white;
+        float: right;
+        font-size: 1.25vw;
+        font-weight: bolder;
+        padding-top: .25vw;
     }
-    .column.three-fifths{
+    .menu:hover {
+        background: #FBD5DB;
+    }
+    .menu:active {
+        background: #FBD5DB;
+    }
+    .menu ul {
+        position: absolute;
+        right: .75vw;
+        top: 5vw;
+        background: #5D737E;
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
+        border-radius: 0 0 10px 10px;
+        font-size: 2.25vw;
+        font-weight: normal;
+    }
+    .menu li {
+        padding: .75vw 1.5vw;
+    }
+    .leftColumn .fa-ul {
+        margin-left: 1.5em;
+    }
+    .column.three-fifths .about{
         width: 100%;
+    }
+    /*.column.two-fifths {*/
+        /*width: 50%;*/
+    /*}*/
+    .column.one-third {
+        width: 50%;
+        height: 53vw;
+    }
+    .projects p {
+        line-height: 5vw;
+    }
+    .tag {
+        float: none;
+    }
+    .one-third p:nth-of-type(1) {
+        display: none;
     }
     .column.three-fourths.offset{
         width: 100%;
@@ -870,6 +927,13 @@ hr {
         height: 50.5vw;
     }
     .paper {
-        height: 127.2vw;
+        height: 129.2vw;
+    }
+    .contact img {
+        width: 100%;
+        margin-top: 3vw;
+    }
+    .contact a {
+        font-size: 2.25vw;
     }
 }

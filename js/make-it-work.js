@@ -5,43 +5,44 @@ $('code').hide();
 $('.paper p, .paper dl, .paper h4, .paper ul').hide();
 $('.projects .column').hide();
 $('.contactIcons').hide();
+$('.menu ul').hide();
 
 $(window).on("scroll", () => {
-    if($('.banner-inner h1').visible(true) === false) {
+    if ($('.banner-inner h1').visible(true) === false) {
         $('.name').fadeIn();
     } else {
         $('.name').fadeOut();
     }
-    if($('.computer').visible(true)) {
+    if ($('.computer').visible(true)) {
         $('.heading h1').addClass("type").show();
         $('code').slideDown(1500);
     }
-    if($('.paper').visible(true)) {
+    if ($('.paper').visible(true)) {
         $('.paper p, .paper dl, .paper h4, .paper ul').slideDown(1500);
     }
-    if($('.gray .row').visible()){
+    if ($('.gray .row').visible()) {
         $('.projects .column').slideDown(1500);
     }
-    if($('.contact h2').visible(true)) {
+    if ($('.contact h2').visible(true)) {
         $('.contactIcons').slideDown(1500);
     }
 
-    if($('.contact a').visible(true)) {
+    if ($('.contact a').visible(true)) {
         $("#aboutNav").css("background", "#5D737E");
         $("#resumeNav").css("background", "#5D737E");
         $("#projectsNav").css("background", "#5D737E");
         $("#contactNav").css("background", "#FBD5DB");
-    } else if($('.gray h3').visible(true)){
+    } else if ($('.gray h3').visible(true)) {
         $("#aboutNav").css("background", "#5D737E");
         $("#resumeNav").css("background", "#5D737E");
         $("#projectsNav").css("background", "#FBD5DB");
         $("#contactNav").css("background", "#5D737E");
-    } else if($('.pink h2').visible(true)) {
+    } else if ($('.pink h2').visible(true)) {
         $("#aboutNav").css("background", "#FBD5DB");
         $("#resumeNav").css("background", "#5D737E");
         $("#projectsNav").css("background", "#5D737E");
         $("#contactNav").css("background", "#5D737E");
-    }  else if($('.banner-inner h1').visible(true)) {
+    } else if ($('.banner-inner h1').visible(true)) {
         $("#aboutNav").css("background", "#5D737E");
         $("#resumeNav").css("background", "#5D737E");
         $("#projectsNav").css("background", "#5D737E");
@@ -52,6 +53,9 @@ $(window).on("scroll", () => {
         $("#projectsNav").css("background", "#5D737E");
         $("#contactNav").css("background", "#5D737E");
     }
+});
+$('.menu').click(() => {
+    $('.menu ul').slideToggle(500);
 });
 $(".power").click(() => {
     $(".screenOn").toggleClass("screenOff");
