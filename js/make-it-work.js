@@ -420,7 +420,7 @@ $("document").ready(function() {
             var dateArray = [];
             var counter = 0;
             weather.list.forEach(function(temp){
-                var date = new Date((temp.dt * 1000)-21600);
+                var date = new Date((temp.dt * 1000)-18000);
                 dateArray.push(date.getDay());
                 tempMaxArray.push(Math.round(temp.main.temp_max));
                 tempMinArray.push(Math.round(temp.main.temp_min));
