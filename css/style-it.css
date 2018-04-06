@@ -16,6 +16,11 @@ body {
 *:focus {
     outline: none;
 }
+input, button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 h1{
    font-size: 4vw;
 }
@@ -167,7 +172,7 @@ p {
     background: white;
     border-radius: 15px;
     width: 100%;
-    height: 83.2vw;
+    height: 87.2vw;
     text-align: left;
 
 }
