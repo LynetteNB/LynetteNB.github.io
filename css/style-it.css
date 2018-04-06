@@ -16,10 +16,9 @@ body {
 *:focus {
     outline: none;
 }
-input, button {
+input {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
 }
 h1{
    font-size: 4vw;
