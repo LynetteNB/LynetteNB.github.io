@@ -348,9 +348,9 @@ hr {
 /*----------------------------------POMODORO MODAL-------------------------------*/
 
 #pomodoroContent {
-    width: 65%;
-    margin: 3% auto;
-    height: 47vw;
+    width: 70%;
+    margin: 2% auto;
+    height: 48.5vw;
     font-size: 1.6vw;
 }
 #pomodoroContent h1 {
