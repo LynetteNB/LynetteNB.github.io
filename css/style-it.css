@@ -164,6 +164,117 @@ p {
 .focus{
     color: white;
 }
+.computer {
+    width: 100%;
+    margin-top: 25%;
+}
+.outerScreen{
+    width: 100%;
+    height: 18.89vw;
+    background: #5D737E;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: -0.694vw 0.694vw 0.694vw grey;
+}
+.screen{
+    width: 93.33%;
+    height: 14.443vw;
+    border-radius: 20px;
+    position: absolute;
+    top: 1.11vw;
+    left: 3.33%;
+}
+.screenOn{
+    background: #C0FDFB;
+}
+.screenOff{
+    background: #314650;
+}
+.compEyes{
+    position: absolute;
+    top: 11vw;
+    left: 0.5vw;
+}
+.heading {
+    width: 76.67%;
+    margin: 0 auto;
+    padding: 6.777vw 0;
+}
+.type{
+    animation: typing 2s steps(13, end), blinking .9s step-end infinite;
+    border-right: 3px solid #5D737E;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+    font-size: 3.72vw;
+}
+@keyframes typing {
+    0%{width: 0;}
+    100%{width: 100%}
+}
+@keyframes blinking {
+    0%{border-color: transparent;}
+    50%{border-color: #5D737E;}
+}
+.power {
+    width: 13.33%;
+    height: 1.11vw;
+    background: #5D737E;
+    border: 0.2777777777777778vw solid #818183;
+    border-radius: 20px;
+    position: absolute;
+    bottom: .83vw;
+    right: 42%;
+    cursor: pointer;
+}
+.power:active {
+    background: #314650;
+}
+.stand{
+    background: lightgray;
+    width: 16.67%;
+    height: 2.2222222222222223vw;
+    border-left: 0.5555555555555556vw solid #5D737E;
+    border-right: 0.5555555555555556vw solid #5D737E;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    box-shadow: -0.6944444444444444vw 0.20833333333333331vw 0.6944444444444444vw grey;
+}
+.keyboard {
+    width: 93.33%;
+    height: 11.11111111111111vw;
+    background: #5D737E;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+.all-keys{
+    margin: 0 auto;
+    padding: 1.67vw 5%;
+}
+.key-row{
+    display: flex;
+}
+.key {
+    width: 7%;
+    height: 1.6vw;
+    background: #5D737E;
+    border-radius: 10px;
+    border: 0.2777777777777778vw solid #818183;
+    margin: .208vw .625%;
+}
+.space {
+    width: 21.67%;
+    height: 1.6vw;
+    background: #5D737E;
+    border-radius: 10px;
+    border: 0.2777777777777778vw solid #818183;
+    margin: 0.20833333333333331vw .625%;
+}
 .light-blue {
     background: #C0FDFB;
 }
