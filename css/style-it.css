@@ -137,14 +137,14 @@ p {
 .banner{
     width: 100%;
     min-height: 100%;
-    background-image: url("../img/laptop.gif");
+    background-image: url("../img/laptop.JPG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 .banner-inner{
     padding: 45.5vh 20vw;
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .7);
 }
 .pink{
     background: #FBD5DB;
