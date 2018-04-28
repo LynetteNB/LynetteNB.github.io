@@ -64,6 +64,11 @@ $(".power").click(() => {
     $(".heading").fadeToggle(500);
 });
 
+//------------------------------------------------GAMELISTER -----------------------------------------------------------
+    $("#gamelisterImg").click(() => {
+        $("#gamelisterModal").removeClass("popDown").css("display", "block").addClass("popUp");
+    });
+
 //------------------------------------------------POMODORO CLOCK--------------------------------------------------------
 $("#timer").hide();
 $("#statusIcon").hide();
