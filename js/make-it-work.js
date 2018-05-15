@@ -14,7 +14,7 @@ $(window).on("scroll", () => {
         $("#resumeNav").css("background", "#5D737E");
         $("#projectsNav").css("background", "#5D737E");
         $("#contactNav").css("background", "#FBD5DB");
-    } else if ($('.gray h3').visible(true, true, 'vertical')) {
+    } else if ($('.gray h3').visible(true, true, 'vertical') || $('.projectsSecond').visible(true, true, 'vertical')) {
         $("#aboutNav").css("background", "#5D737E");
         $("#resumeNav").css("background", "#5D737E");
         $("#projectsNav").css("background", "#FBD5DB");
