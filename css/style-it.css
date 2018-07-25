@@ -878,6 +878,15 @@ hr {
     display: inline-block;
     text-align: center;
 }
+#weatherContent label {
+    color: #8080807d;
+    padding: 0 .5rem;
+    white-space: nowrap;
+}
+#weatherContent input:checked +label {
+    color: #2793e6;
+    font-weight: bolder;
+}
 .dayOptions {
     width: 15%;
     text-align: right;
