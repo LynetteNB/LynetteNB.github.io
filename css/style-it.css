@@ -421,7 +421,7 @@ hr {
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
-#simonModal, #pomodoroModal, #weatherModal, #gamelisterModal{
+#simonModal, #pomodoroModal, #weatherModal, #gamelisterModal, #kincurrentlyMOdal {
     display:none;
 }
 .modalContent {
