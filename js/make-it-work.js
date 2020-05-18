@@ -64,7 +64,12 @@ $(".power").click(() => {
     $(".heading").fadeToggle(500);
 });
 
-//------------------------------------------------GAMELISTER -----------------------------------------------------------
+//------------------------------------------------KINCURRENTLY----------------------------------------------------------
+$("#kincurrentlyImg").click(() => {
+        $("#kincurrentlyModal").removeClass("popDown").css("display", "block").addClass("popUp");
+    });
+
+//------------------------------------------------GAMELISTER------------------------------------------------------------
     $("#gamelisterImg").click(() => {
         $("#gamelisterModal").removeClass("popDown").css("display", "block").addClass("popUp");
     });
